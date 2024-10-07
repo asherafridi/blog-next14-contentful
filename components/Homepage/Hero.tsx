@@ -4,9 +4,6 @@ import Link from 'next/link'
 
 const Hero = () => {
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
     return (
         <section className="business_consulting_hero_section section_decoration mb-0" style={{ backgroundImage: `url(${'/images/hero/business_consulting_hero_section_bg.jpg'})` }}>
             <div className="container">

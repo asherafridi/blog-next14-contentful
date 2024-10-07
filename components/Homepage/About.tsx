@@ -10,11 +10,6 @@ import Image from 'next/image'
 
 const About = () => {
 
-    const [isOpen, setOpen] = useState(false)
-
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
 
     return (
         <section className="about_section section_space ">
@@ -62,7 +57,7 @@ const About = () => {
                             </ul>
                             <ul className="btns_group unordered_list p-0 justify-content-start">
                                 <li>
-                                    <Link onClick={ClickHandler} href="/pricing" className="btn">
+                                    <Link href="/pricing" className="btn">
                                         <span className="btn_label" data-text="Read More">Read More</span>
                                         <span className="btn_icon">
                                             <i className="fa-solid fa-arrow-up-right"></i>

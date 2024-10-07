@@ -18,9 +18,6 @@ const ProjectSection = () => {
         return null;
     }
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    };
 
     const displayedProjects = Project && Project.length > 0 ? Project.slice(0, 5) : [];
 

@@ -9,9 +9,7 @@ import Image from 'next/image'
 
 const BlogSection = () => {
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+
 
     return (
         <section className="blog_section section_space" style={{ backgroundImage: `url(${Bg})` }}>

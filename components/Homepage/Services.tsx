@@ -4,9 +4,6 @@ import Link from 'next/link'
 
 
 const ServiceSection = () => {
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
 
     return (
         <section className="service_section pt-175 pb-80 bg-light  xb-hidden">
