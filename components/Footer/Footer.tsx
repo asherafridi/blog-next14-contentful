@@ -7,9 +7,7 @@ import icon3 from '/public/images/icons/icon_map_mark.svg'
 import icon4 from '/public/images/icons/icon_mail_2.svg'
 import Image from 'next/image'
 
-const ClickHandler = () => {
-    window.scrollTo(10, 0);
-}
+
 
 const SubmitHandler = (e: any) => {
     e.preventDefault()

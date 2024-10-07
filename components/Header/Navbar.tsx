@@ -17,13 +17,10 @@ import cases from '@/public/images/case/case_image_4.webp'
 import MobileMenu from './MobileMenu'
 import Image from 'next/image';
 
-const Header = (props: any) => {
+const Header = () => {
 
     const [mobailActive, setMobailState] = useState(false);
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
 
     const [isSticky, setSticky] = useState(false);
 
@@ -50,7 +47,7 @@ const Header = (props: any) => {
         <header className="site_header site_header_1">
             <div className="header_top text-center">
                 <div className="container">
-                    <p className="m-0">Subscribe us and receive <b>20% bonus</b> discount on checkout. <Link onClick={ClickHandler} href="/pricing"><u>Learn more</u> <i className="fa-solid fa-angle-right"></i></Link></p>
+                    <p className="m-0">Subscribe us and receive <b>20% bonus</b> discount on checkout. <Link href="/pricing"><u>Learn more</u> <i className="fa-solid fa-angle-right"></i></Link></p>
                 </div>
             </div>
             <div className={`header_bottom stricky  ${isSticky ? 'stricked-menu stricky-fixed' : ''}`}>
@@ -58,7 +55,7 @@ const Header = (props: any) => {
                     <div className="row align-items-center">
                         <div className="col-xl-3 col-lg-2 col-5">
                             <div className="site_logo">
-                                <Link onClick={ClickHandler} className="site_link" href="/">
+                                <Link className="site_link" href="/">
                                     <Image src={logo} alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template" />
                                 </Link>
                             </div>
@@ -70,7 +67,7 @@ const Header = (props: any) => {
 
                                         <li><Link href="/home">Home</Link></li>
                                         <li className="dropdown">
-                                            <Link onClick={ClickHandler} className="nav-link" href="/" id="services_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <Link className="nav-link" href="/" id="services_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Services
                                             </Link>
                                             <div className="dropdown-menu mega_menu_wrapper p-0" aria-labelledby="services_submenu">
@@ -83,49 +80,49 @@ const Header = (props: any) => {
                                                                         <h3 className="megamenu_info_title">Services</h3>
                                                                         <ul className="icon_list unordered_list_block">
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         IT Management Services
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/Data-Tracking-and-Security">
+                                                                                <Link href="/service-single/Data-Tracking-and-Security">
                                                                                     <span className="icon_list_text">
                                                                                         Data Tracking Security
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         Website Development
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         CRM Solutions and Design
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         UI/UX Design Services
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         Technology Solution
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service-single/IT-Management-Services">
+                                                                                <Link href="/service-single/IT-Management-Services">
                                                                                     <span className="icon_list_text">
                                                                                         Software Development
                                                                                     </span>
@@ -139,49 +136,49 @@ const Header = (props: any) => {
                                                                         <h3 className="megamenu_info_title">Our Fields</h3>
                                                                         <ul className="icon_list unordered_list_block">
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Healthcare
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Banks
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Logistics
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Supermarkets
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Industries
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Hotels
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Fintech
                                                                                     </span>
@@ -195,42 +192,42 @@ const Header = (props: any) => {
                                                                         <h3 className="megamenu_info_title">Product</h3>
                                                                         <ul className="icon_list unordered_list_block">
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/portfolio">
+                                                                                <Link href="/portfolio">
                                                                                     <span className="icon_list_text">
                                                                                         Case Studies
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/pricing">
+                                                                                <Link href="/pricing">
                                                                                     <span className="icon_list_text">
                                                                                         Our Pricing
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Features
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/about">
+                                                                                <Link href="/about">
                                                                                     <span className="icon_list_text">
                                                                                         Overview
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/">
+                                                                                <Link href="/">
                                                                                     <span className="icon_list_text">
                                                                                         New Releases
                                                                                     </span>
                                                                                 </Link>
                                                                             </li>
                                                                             <li>
-                                                                                <Link onClick={ClickHandler} href="/service">
+                                                                                <Link href="/service">
                                                                                     <span className="icon_list_text">
                                                                                         Solutions
                                                                                     </span>
@@ -243,27 +240,27 @@ const Header = (props: any) => {
                                                             <div className="social_area">
                                                                 <ul className="social_icons_block unordered_list" data-text="Follow Us:">
                                                                     <li>
-                                                                        <Link onClick={ClickHandler} href="/">
+                                                                        <Link href="/">
                                                                             <i className="fa-brands fa-facebook-f"></i>
                                                                         </Link>
                                                                     </li>
                                                                     <li>
-                                                                        <Link onClick={ClickHandler} href="/">
+                                                                        <Link href="/">
                                                                             <i className="fa-brands fa-twitter"></i>
                                                                         </Link>
                                                                     </li>
                                                                     <li>
-                                                                        <Link onClick={ClickHandler} href="/">
+                                                                        <Link href="/">
                                                                             <i className="fa-brands fa-linkedin-in"></i>
                                                                         </Link>
                                                                     </li>
                                                                     <li>
-                                                                        <Link onClick={ClickHandler} href="/">
+                                                                        <Link href="/">
                                                                             <i className="fa-brands fa-dribbble"></i>
                                                                         </Link>
                                                                     </li>
                                                                 </ul>
-                                                                <p className="career_link m-0">Looking for new career? <Link onClick={ClickHandler} href="/">We’re Hiring</Link></p>
+                                                                <p className="career_link m-0">Looking for new career? <Link href="/">We’re Hiring</Link></p>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-3">
@@ -271,7 +268,7 @@ const Header = (props: any) => {
                                                                 <h3>Computer Software</h3>
                                                                 <h4>Astarte Medical</h4>
                                                                 <Image src={cases} alt="Case" />
-                                                                <Link onClick={ClickHandler} className="btn" href="/portfolio">
+                                                                <Link className="btn" href="/portfolio">
                                                                     <span className="btn_label" data-text="Read Case">Read Case</span>
                                                                     <span className="btn_icon">
                                                                         <i className="fa-solid fa-arrow-up-right"></i>
@@ -284,7 +281,7 @@ const Header = (props: any) => {
                                             </div>
                                         </li>
                                         <li className="dropdown">
-                                            <Link onClick={ClickHandler} className="nav-link" href="/" id="company_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <Link className="nav-link" href="/" id="company_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 About Us
                                             </Link>
                                             <div className="dropdown-menu mega_menu_wrapper" aria-labelledby="company_submenu">
@@ -294,7 +291,7 @@ const Header = (props: any) => {
                                                             <div className="megamenu_pages_wrapper mb-5">
                                                                 <div className="row">
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/about">
+                                                                        <Link className="iconbox_block_2" href="/about">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon1} alt="Wifi SVG Icon" />
@@ -307,7 +304,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/pricing">
+                                                                        <Link className="iconbox_block_2" href="/pricing">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon2} alt="Dollar SVG Icon" />
@@ -320,7 +317,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/portfolio">
+                                                                        <Link className="iconbox_block_2" href="/portfolio">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon3} alt="Chart SVG Icon" />
@@ -333,7 +330,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/portfolio_details/Explore-Our-IT-Solutions">
+                                                                        <Link className="iconbox_block_2" href="/portfolio_details/Explore-Our-IT-Solutions">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon4} alt="Event Tag SVG Icon" />
@@ -346,7 +343,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/team">
+                                                                        <Link className="iconbox_block_2" href="/team">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon5} alt="User Check SVG Icon" />
@@ -359,7 +356,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/team-single/Atticus-Sterling">
+                                                                        <Link className="iconbox_block_2" href="/team-single/Atticus-Sterling">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon6} alt="Users SVG Icon" />
@@ -372,7 +369,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/service">
+                                                                        <Link className="iconbox_block_2" href="/service">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon7} alt="Pen SVG Icon" />
@@ -385,7 +382,7 @@ const Header = (props: any) => {
                                                                         </Link>
                                                                     </div>
                                                                     <div className="col-lg-3 col-md-6">
-                                                                        <Link onClick={ClickHandler} className="iconbox_block_2" href="/service-single/IT-Management-Services">
+                                                                        <Link className="iconbox_block_2" href="/service-single/IT-Management-Services">
                                                                             <span className="icon_title_wrap">
                                                                                 <small className="iconbox_icon">
                                                                                     <Image src={icon7} alt="Pen SVG Icon" />
@@ -401,7 +398,7 @@ const Header = (props: any) => {
                                                             </div>
                                                             <ul className="btns_group p-0 unordered_list justify-content-start">
                                                                 <li>
-                                                                    <Link onClick={ClickHandler} className="btn btn-primary" href="/contact">
+                                                                    <Link className="btn btn-primary" href="/contact">
                                                                         <span className="btn_label" data-text="Free Consultation">Free Consultation</span>
                                                                         <span className="btn_icon">
                                                                             <i className="fa-solid fa-arrow-up-right"></i>

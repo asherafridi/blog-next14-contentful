@@ -131,7 +131,7 @@ const MobileMenu = () => {
         <ul className="main_menu_list clearfix">
             {menus.map((item, mn) => {
                 return (
-                    <ListItem className={item.id === openId ? 'active' : null} key={mn}>
+                <ListItem className={item.id === openId ? 'active' : undefined} key={mn}>
                         {item.submenu ?
                             <Fragment>
                                 <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/public/favicon.ico";
 import Header from "@/components/Header/Navbar";
 import "react-toastify/dist/ReactToastify.min.css";
@@ -14,7 +13,6 @@ import '@/styles/animate.css';
 import '@/styles/sass/style.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Head from "next/head";
 import Footer from "@/components/Footer/Footer";
 import "@/styles/globals.css";
 
