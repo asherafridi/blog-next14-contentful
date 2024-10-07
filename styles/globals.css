@@ -1,0 +1,125 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.control-search{
+  background: #fff;
+  height: 60px;
+  border-radius: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 80%;
+}
+.control-search .input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  
+  font-family: "Axiforma regular";
+}
+.control-search .button{
+  background: #020842;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+  color: #fff;
+}
+
+
+
+.business_consulting_hero_section .search-suggest{
+  font-size: 1.2rem;
+  margin-top: 30px;
+  font-family: "Axiforma medium";
+  margin-bottom: 10px;
+}
+
+.search-tags{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.search-tags p{
+  border: 1px solid #020842;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0px 30px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px;
+}
+.search-tags p:hover{  
+  background: #020842;
+  color: #fff;
+} 
+@media (max-width: 600px) {
+  
+  .search-tags p{
+    width: 50%;
+    
+  }
+}
+
+*{
+  font-family: "Axiforma regular";
+}
+
+.iconbox_block{
+  height: 100%;
+}
+.deals_winner_customers{
+  height: 100%;
+}
+
+.deals_winner_customers .title_text{
+  margin-bottom: 0px;
+
+}
