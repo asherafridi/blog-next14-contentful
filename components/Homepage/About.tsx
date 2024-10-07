@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import about1 from '@/public/images/about/about_image_3.webp'
 import about2 from '@/public/images/about/about_image_11.webp'
