@@ -4,11 +4,11 @@ import Link from 'next/link'
 import about1 from '@/public/images/about/about_image_3.webp'
 import about2 from '@/public/images/about/about_image_11.webp'
 import about3 from '@/public/images/about/about_image_10.webp'
-import ModalVideo from 'react-modal-video'
+
 import Image from 'next/image'
 
 
-const About = (props:any) => {
+const About = () => {
 
     const [isOpen, setOpen] = useState(false)
 

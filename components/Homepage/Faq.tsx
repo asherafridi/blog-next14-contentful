@@ -5,7 +5,7 @@ import shape2 from '/public/images/shapes/shape_angle_3.webp';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'; 
 import Image from 'next/image'; 
 
-const FaqSection = (props:any) => { 
+const FaqSection = () => { 
     const [open, setOpen] = useState('1'); 
     const toggle = (id:string) => { 
         if (open === id) { 

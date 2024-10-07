@@ -4,14 +4,9 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import icon1 from "/public/images/icons/icon_c.svg";
-import icon2 from "/public/images/icons/icon_g2.svg";
 import tImg1 from "/public/images/avatar/avatar_5.webp";
 import tImg2 from "/public/images/avatar/avatar_6.webp";
 import tImg3 from "/public/images/avatar/avatar_7.webp";
-import clogo from "/public/images/clients/client_logo_8.webp";
-import flag from "/public/images/flag/ukraine_flag.webp";
-import Image from "next/image";
 
 const testimonial = [
   {

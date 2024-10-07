@@ -82,7 +82,7 @@ const TechnologyList = [
 ]
 
 
-const TechnologySection = (props:any) => {
+const TechnologySection = () => {
 
     const [activeTab, setActiveTab] = useState('3');
 
