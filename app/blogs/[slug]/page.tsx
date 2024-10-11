@@ -3,7 +3,6 @@
 
 import React, { useEffect, useState } from 'react';
 import client from '@/lib/contentfulClient';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'; // Import the renderer
 import BreadCrumb from '@/components/Breadcrumb';
 import CtaSection from '@/components/CtaSection';
 import BlogSingle from '@/components/BlogSingle';

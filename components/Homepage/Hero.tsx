@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Add autoplay module CSS
 
-import { Navigation, Pagination,Autoplay } from 'swiper/modules';
+import {Autoplay } from 'swiper/modules';
 
 
 const suggestions = [

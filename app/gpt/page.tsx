@@ -77,6 +77,7 @@ const Page = () => {
             }
         } catch (error) {
             setIsLoading(false);
+            console.log(error);
             setMessages([...newMessages, { sender: 'GPT', text: 'Error: Something went wrong.' }]);
         }
     };

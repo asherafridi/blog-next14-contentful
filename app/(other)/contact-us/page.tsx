@@ -13,11 +13,6 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
 
     
-    const [isOpen, setOpen] = useState(false)
-
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
 
     
     return (

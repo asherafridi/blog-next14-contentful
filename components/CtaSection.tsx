@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
 
-const CtaSection = (props:any) => {
+const CtaSection = () => {
 
    
 
@@ -10,7 +10,7 @@ const CtaSection = (props:any) => {
             <div className="container text-center">
                 <div className="heading_block text-white">
                     <h2 className="heading_text">
-                        Ready to Work, Let's Chat
+                        Ready to Work, Lets Chat
                     </h2>
                     <p className="heading_description mb-0">
                         Our team of experts is ready to collaborate with you every step of the way, from initial consultation to implementation.

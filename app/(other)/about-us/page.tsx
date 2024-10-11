@@ -1,29 +1,14 @@
 "use client"
 import BreadCrumb from "@/components/Breadcrumb";
 import CtaSection from "@/components/CtaSection";
-import About from "@/components/Homepage/About";
-import BlogSection from "@/components/Homepage/Blog";
-import FaqSection from "@/components/Homepage/Faq";
-import Hero from "@/components/Homepage/Hero";
-import ProjectSection from "@/components/Homepage/Portfolio";
-import ServiceSection from "@/components/Homepage/Services";
-import TechnologySection from "@/components/Homepage/Technology";
-import Testimonial from "@/components/Homepage/Testimonial";
 import Image from "next/image";
 
 import aImg from '@/public/images/about/about_image_3.webp'
-import aImg2 from '@/public/images/about/about_image_4.webp'
-import { useState } from "react";
 
 export default function Home() {
 
     
-    const [isOpen, setOpen] = useState(false)
-
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
-
+   
     
     return (
         <>

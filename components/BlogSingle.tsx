@@ -3,10 +3,8 @@ import icon1 from '/public/images/icons/icon_calendar.svg'
 
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'; // Import the renderer
-import { Document } from '@contentful/rich-text-types';
 
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import Image from 'next/image';
 
 const BlogSingle = (props:any) => {

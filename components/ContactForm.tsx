@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SimpleReactValidator from 'simple-react-validator';
 
-const ContactForm = (props:any) => {
+const ContactForm = () => {
 
     const [forms, setForms] = useState({
         name: '',

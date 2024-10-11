@@ -1,17 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import icon1 from '@/public/images/icons/icon_wifi.svg'
-import icon2 from '@/public/images/icons/icon_dollar_2.svg'
-import icon3 from '@/public/images/icons/icon_chart.svg'
-import icon4 from '@/public/images/icons/icon_tag_2.svg'
-import icon5 from '@/public/images/icons/icon_user_2.svg'
-import icon6 from '@/public/images/icons/icon_users.svg'
-import icon7 from '@/public/images/icons/icon_pen.svg'
-import icon8 from '@/public/images/clients/client_logo_9.webp'
-import icon9 from '@/public/images/clients/client_logo_10.webp'
-import icon10 from '@/public/images/avatar/avatar_7.webp'
-import icon11 from '@/public/images/icons/icon_quote.svg'
 import logo from '@/public/logo.png'
 import cases from '@/public/images/case/case_image_4.webp'
 import MobileMenu from './MobileMenu'

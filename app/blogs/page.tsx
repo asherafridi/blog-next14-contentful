@@ -57,7 +57,7 @@ const BlogList = () => {
               {currentBlogs.map((blog, Bitem) => (
                 <div className="blog_post_block image_left_layout" key={Bitem}>
                   <div className="blog_post_image">
-                    <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`} className="image_wrap">
+                    <Link  href={`/blogs/${blog.fields.slug}`} className="image_wrap">
                       <Image
                         src={`https:${blog.fields.featuredImage.fields.file.url}`}
                         alt="Blog Post"
@@ -70,32 +70,32 @@ const BlogList = () => {
                     <div className="post_meta_wrap">
                       <ul className="category_btns_group unordered_list">
                         <li style={{ textTransform: 'capitalize' }}>
-                          <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`}>
+                          <Link  href={`/blogs/${blog.fields.slug}`}>
                             {blog.fields.tags.tags[0]}
                           </Link>
                         </li>
                       </ul>
                       <ul className="post_meta unordered_list">
                         <li>
-                          <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`}>
+                          <Link  href={`/blogs/${blog.fields.slug}`}>
                             <Image src={icon1} alt="Icon Calendar" />{' '}
                             {new Date(blog.fields.publishDate).toLocaleDateString()}
                           </Link>
                         </li>
                         <li>
-                          <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`}>
+                          <Link  href={`/blogs/${blog.fields.slug}`}>
                             <i className="fa-regular fa-comment-lines"></i> 24
                           </Link>
                         </li>
                       </ul>
                     </div>
                     <h3 className="blog_post_title">
-                      <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`}>
+                      <Link  href={`/blogs/${blog.fields.slug}`}>
                         {blog.fields.title}
                       </Link>
                     </h3>
                     <p>{blog.fields.description}</p>
-                    <Link onClick={ClickHandler} href={`/blogs/${blog.fields.slug}`} className="btn btn-dark">
+                    <Link  href={`/blogs/${blog.fields.slug}`} className="btn btn-dark">
                       <span className="btn_label" data-text="Read More">Read More</span>
                       <span className="btn_icon">
                         <i className="fa-solid fa-arrow-up-right"></i>
