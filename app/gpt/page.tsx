@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
-import ReactHtmlParser from 'react-html-parser';
 
 // Extend the window object for SpeechRecognition
 declare global {
