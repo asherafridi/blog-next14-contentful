@@ -57,7 +57,7 @@ const About = () => {
                             </ul>
                             <ul className="btns_group unordered_list p-0 justify-content-start">
                                 <li>
-                                    <Link href="/pricing" className="btn">
+                                    <Link href="/about-us" className="btn">
                                         <span className="btn_label" data-text="Read More">Read More</span>
                                         <span className="btn_icon">
                                             <i className="fa-solid fa-arrow-up-right"></i>
