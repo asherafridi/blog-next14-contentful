@@ -7,7 +7,6 @@ import icon2 from '/public/images/icons/icon_calling_2.svg'
 import icon3 from '/public/images/icons/icon_mail_3.svg'
 import icon4 from '/public/images/icons/icon_calendar_2.svg'
 import Image from 'next/image'
-import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {

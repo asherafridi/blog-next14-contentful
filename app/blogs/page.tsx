@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import client from '@/lib/contentfulClient';
@@ -28,9 +28,6 @@ const BlogList = () => {
     fetchBlogs();
   }, []);
 
-  const ClickHandler = () => {
-    window.scrollTo(10, 0);
-  };
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
