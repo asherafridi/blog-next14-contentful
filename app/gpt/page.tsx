@@ -3,14 +3,14 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // Extend the window object for SpeechRecognition
 declare global {
-  interface Window {
-    SpeechRecognition: any;
-    webkitSpeechRecognition: any;
+    interface Window {
+      SpeechRecognition: any;
+      webkitSpeechRecognition: any;
+    }
   }
-}
-
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+  
+  let SpeechRecognition: any;
+  let recognition: any;
 
 interface JSXMessage {
     sender: string;
@@ -26,19 +26,26 @@ const Page = () => {
     const [isListening, setIsListening] = useState(false);
     const chatRef = useRef<HTMLDivElement>(null);
 
+    
     useEffect(() => {
-        recognition.onresult = (event:any) => {
-            const transcript = event.results[0][0].transcript;
-            setInput(transcript);
-            setIsListening(false);
-            handleSendMessage();
-        };
+        // Ensure SpeechRecognition is only initialized on the client side
+        if (typeof window !== "undefined") {
+            SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
 
-        recognition.onend = () => setIsListening(false);
-        recognition.onerror = (event:any) => {
-            console.error('Speech Recognition Error', event.error);
-            setIsListening(false);
-        };
+            recognition.onresult = (event: any) => {
+                const transcript = event.results[0][0].transcript;
+                setInput(transcript);
+                setIsListening(false);
+                handleSendMessage();
+            };
+
+            recognition.onend = () => setIsListening(false);
+            recognition.onerror = (event: any) => {
+                console.error('Speech Recognition Error', event.error);
+                setIsListening(false);
+            };
+        }
     }, []);
 
     useEffect(() => {
