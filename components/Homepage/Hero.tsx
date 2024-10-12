@@ -56,7 +56,7 @@ const Hero = () => {
         if (inputValue) {
             // Encode the input value to ensure it's URL safe
             const encodedMessage = encodeURIComponent(inputValue);
-            window.location.href = `http://localhost:3000/gpt?initial-message=${encodedMessage}`;
+            window.location.href = `/gpt?initial-message=${encodedMessage}`;
         }
     };
 
