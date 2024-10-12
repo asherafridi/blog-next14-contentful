@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import logo from '@/public/logo.png'
-import cases from '@/public/images/case/case_image_4.webp'
 import MobileMenu from './MobileMenu'
 import Image from 'next/image';
 import ServiceMenu from './Services';
