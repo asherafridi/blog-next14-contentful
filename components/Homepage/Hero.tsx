@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -10,37 +10,82 @@ import 'swiper/css/autoplay'; // Add autoplay module CSS
 
 import { Autoplay } from 'swiper/modules';
 
-
 const suggestions = [
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
-    "Increase my customer lifetime value",
+    "Data Center Modernization",
+    "Office 365 Migration",
+    "Cloud Migration Services",
+    "Network Consultation",
+    "Security Assessment",
+    "Helpdesk Services",
+    "Security Operation Centre",
+    "Storage Support Services",
+    "Server Support Services",
+    "Managed IT Services",
+    "Managed Enterprise Networks",
+    "Microsoft Copilot",
+    "Google Cloud Platform",
+    "Microsoft Azure",
+    "AWS",
+    "Robotic Process Automation",
+    "Intelligent Process Automation",
+    "Analytics & BI",
+    "Chatbot Development",
+    "ML OPS",
+    "GEN AI development",
+    "NLP",
+    "Facial Recognition",
+    "Anomaly Detection",
+    "Machine Learning",
+    "Deep Learning",
+    "Computer Vision",
+    "AI- Proof Of Concept",
+    "AI App Development",
+    "AI Development",
+    "AI Consultations"
 ];
 
 const Hero = () => {
+    const [inputValue, setInputValue] = useState("");
+
+    const handleInputChange = (e:any) => {
+        setInputValue(e.target.value);
+    };
+
+    const handleSubmit = (e:any) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+        if (inputValue) {
+            // Encode the input value to ensure it's URL safe
+            const encodedMessage = encodeURIComponent(inputValue);
+            window.location.href = `http://localhost:3000/gpt?initial-message=${encodedMessage}`;
+        }
+    };
+
     return (
         <section className="business_consulting_hero_section section_decoration mb-0" style={{ backgroundImage: `url('/images/hero/business_consulting_hero_section_bg.jpg')` }}>
             <div className="container">
                 <div className="row align-items-center justify-content-lg-between">
                     <div className="container-fluid d-flex justify-content-center flex-column align-items-center">
                         <h2>Cloud-Powered Success for Modern Enterprises</h2>
-                        <div className="control-search">
-                            <input className="input is-rounded" type="text" placeholder="What issue can we solve for you?" aria-label="Search" style={{ display: "block" }} />
-                            <button className="button" aria-label="Submit Search" aria-hidden="false" style={{ display: "block" }} aria-disabled="true" disabled={true}>
-                                <i className="fa-solid fa-arrow-up"></i>
-                            </button>
-                        </div>
+                            <form onSubmit={handleSubmit} className='control-search'>
+                                <input
+                                    className="input is-rounded"
+                                    type="text"
+                                    placeholder="What issue can we solve for you?"
+                                    aria-label="Search"
+                                    style={{ display: "block" }}
+                                    value={inputValue}
+                                    onChange={handleInputChange} // Handle input changes
+                                />
+                                <button
+                                    className="button"
+                                    aria-label="Submit Search"
+                                    aria-hidden="false"
+                                    style={{ display: "block" }}
+                                    type="submit" // Change to type submit
+                                >
+                                    <i className="fa-solid fa-arrow-up"></i>
+                                </button>
+                            </form>
                         <p className='search-suggest '>Type in your prompt above or try one of these suggestions:</p>
                         <Swiper
                             modules={[Autoplay]} // Make sure Autoplay is included here
@@ -55,7 +100,6 @@ const Hero = () => {
                                 disableOnInteraction: false, // Continue autoplay after user interaction
                                 pauseOnMouseEnter: true // Pauses autoplay on hover
                             }}
-
                             breakpoints={{
                                 320: {
                                     slidesPerView: 1, // Show 1 slide on mobile screens
@@ -74,7 +118,7 @@ const Hero = () => {
                         >
                             {suggestions.map((suggestion, idx) => (
                                 <SwiperSlide key={idx}>
-                                    <p><Link href={`/gpt?initial-message=${suggestion}`}>{suggestion}</Link></p>
+                                    <p><Link href={`/gpt?initial-message=${encodeURIComponent(suggestion)}`}>{suggestion}</Link></p>
                                 </SwiperSlide>
                             ))}
                         </Swiper>

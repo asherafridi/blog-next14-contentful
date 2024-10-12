@@ -23,7 +23,7 @@ const BlogSingle = (props: any) => {
                 </div>
                 <div className="post_meta_wrap mb-4">
                     <ul className="category_btns_group unordered_list">
-                        {BlogDetails?.fields.tags.tags.map((tag: any, index: any) => (
+                        {BlogDetails?.fields?.tags?.tags.map((tag: any, index: any) => (
                             <li key={index}><Link href="">{tag}</Link></li>
                         ))}
                     </ul>

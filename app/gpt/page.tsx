@@ -26,6 +26,7 @@ const ChatComponent = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [shouldSend,setShouldSend] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
 
   // Handle SpeechRecognition setup
@@ -60,15 +61,16 @@ const ChatComponent = () => {
     const initialMessage = searchParams.get("initial-message"); // Get the 'initial-message' query param
     if (initialMessage && typeof initialMessage === "string") {
       setInput(decodeURIComponent(initialMessage)); // Set the input to the initial message from the URL
+      setShouldSend(true);
     }
   }, [searchParams]); // Run this effect when the query parameters change
 
   // Handle sending the message after input has been set
   useEffect(() => {
-    if (input.trim() !== "") {
+    if (shouldSend && input.trim() !== "") {
       handleSendMessage(); // Send the message automatically after input is updated
     }
-  }, [input]);
+  }, [shouldSend]);
 
   const handleSendMessage = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -153,7 +155,7 @@ const ChatComponent = () => {
 
   return (
     <div className="row gpt">
-      <div className="col-md-3 sidebar">
+      <div className="col-md-3 sidebar d-none d-sm-flex">
         <h2>
           Welcome to ChatZone, CloudZone IT generative AI tool guiding you to the answers you need about digital business
           transformation. What issue can we solve for you today?

@@ -14,6 +14,16 @@ const SubmitHandler = (e: any) => {
 }
 
 
+const services = [
+    "Data Center Modernization",
+    "Office 365 Migration",
+    "Cloud Migration Services",
+    "Network Consultation",
+    "Security Assessment",
+    "Helpdesk Services",
+];
+
+
 const Footer = () => {
     return (
         <footer className="site_footer footer_layout_1">
@@ -80,53 +90,17 @@ const Footer = () => {
                                 <div className="footer_widget">
                                     <h3 className="footer_info_title">Services</h3>
                                     <ul className="icon_list unordered_list_block">
-                                        {/* {Services.slice(0, 6).map((service, srv) => (
+                                        {services.map((service, srv) => (
                                             <li key={srv}>
-                                                {service.title ?
-                                                    <Link  href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>
+                                                {service ?
+                                                    <Link  href={'/service/[slug]'} as={`/services/${service}`}>
                                                         <span className="icon_list_text">
-                                                            {service.title}
+                                                            {service}
                                                         </span>
                                                     </Link>
                                                     : ''}
                                             </li>
-                                        ))} */}
-                                        
-                                        <li>
-                                            <Link  href="/service">
-                                                <span className="icon_list_text">
-                                                    AI & Data Analytics
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link  href="/service">
-                                                <span className="icon_list_text">
-                                                    Cloud Platforms
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link  href="/service">
-                                                <span className="icon_list_text">
-                                                    Security Assesment
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link  href="/service">
-                                                <span className="icon_list_text">
-                                                    Managed Services
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link  href="/service">
-                                                <span className="icon_list_text">
-                                                    Migrate | Modernize
-                                                </span>
-                                            </Link>
-                                        </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -135,28 +109,28 @@ const Footer = () => {
                                     <h3 className="footer_info_title">Information</h3>
                                     <ul className="icon_list unordered_list_block">
                                         <li>
-                                            <Link  href="/about">
+                                            <Link  href="/about-us">
                                                 <span className="icon_list_text">
-                                                    What we do
+                                                    About Us
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/service">
+                                            <Link  href="/meet">
                                                 <span className="icon_list_text">
                                                     Scedule a Meeting
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/contact">
+                                            <Link  href="/portfolio">
                                                 <span className="icon_list_text">
                                                     Our Portfolio
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/about">
+                                            <Link  href="/contact-us">
                                                 <span className="icon_list_text">
                                                     Contact Us
                                                 </span>
@@ -174,9 +148,9 @@ const Footer = () => {
                     <p className="copyright_text m-0">
                         Copyright © 2024 Techco, All rights reserved.
                     </p>
-                    <p className="copyright_text m-0">
+                    {/* <p className="copyright_text m-0">
                         Developed by <Link  href="/">XpressBuddy</Link>
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </footer>
