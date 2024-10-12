@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 // Extend the window object for SpeechRecognition
@@ -18,7 +18,7 @@ interface JSXMessage {
   text: any; // Or `Element[]`, depending on your JSX setup
 }
 
-const Page = () => { // Get the router object
+const ChatComponent = () => {
   const searchParams = useSearchParams(); // Get search parameters
   const [messages, setMessages] = useState<JSXMessage[]>([
     { sender: "GPT", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
@@ -54,7 +54,6 @@ const Page = () => { // Get the router object
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
     }
   }, [messages]);
-
 
   // Check for initial message in the URL and update the input
   useEffect(() => {
@@ -206,5 +205,11 @@ const Page = () => { // Get the router object
     </div>
   );
 };
+
+const Page = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <ChatComponent />
+  </Suspense>
+);
 
 export default Page;
