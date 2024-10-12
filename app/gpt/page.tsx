@@ -18,8 +18,7 @@ interface JSXMessage {
   text: any; // Or `Element[]`, depending on your JSX setup
 }
 
-const Page = () => {
-  const router = useRouter(); // Get the router object
+const Page = () => { // Get the router object
   const searchParams = useSearchParams(); // Get search parameters
   const [messages, setMessages] = useState<JSXMessage[]>([
     { sender: "GPT", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
