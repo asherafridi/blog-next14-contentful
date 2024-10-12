@@ -16,7 +16,7 @@ const BlogSingle = (props:any) => {
             <div className="container">
                 <div className="details_item_image"><Image
                                             src={`https:${BlogDetails.fields.featuredImage.fields.file.url}`} // Adjust image URL from Contentful
-                                            alt={post.fields.title}
+                                            alt={BlogDetails.fields.title}
                                             width={2580}
                                             height={1190}
                                         />
