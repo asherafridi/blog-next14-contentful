@@ -14,8 +14,12 @@ const BlogSingle = (props:any) => {
     return (
         <section className="blog_details_section section_space bg-light">
             <div className="container">
-                <div className="details_item_image">
-                    <Image src={"https://" + BlogDetails.fields.featuredImage.fields.file.url} alt="Techco - Blog" width={2580} height={1190} />
+                <div className="details_item_image"><Image
+                                            src={`https:${BlogDetails.fields.featuredImage.fields.file.url}`} // Adjust image URL from Contentful
+                                            alt={post.fields.title}
+                                            width={2580}
+                                            height={1190}
+                                        />
                 </div>
                 <div className="post_meta_wrap mb-4">
                     <ul className="category_btns_group unordered_list">
