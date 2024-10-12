@@ -11,7 +11,6 @@ const menus = [
 ];
 
 const MobileMenu = () => {
-    const [openId, setOpenId] = useState(0);
 
     return (
         <ul className="main_menu_list clearfix">
