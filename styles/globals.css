@@ -51,7 +51,7 @@ a {
   width: 80%;
 }
 .control-search .input{
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
   background: transparent;
   outline: none;
@@ -84,16 +84,20 @@ a {
   justify-content: center;
   width: 100%;
 }
+.search-tags .swiper-slide {
+  padding: 0 20px;
+}
 .search-tags p{
   border: 1px solid #020842;
-  height: 40px;
+  min-height: 40px;
   border-radius: 20px;
   padding: 0px 30px;
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   margin: 10px;
+  width: 100%;
 }
 .search-tags p:hover{  
   background: #020842;
@@ -101,9 +105,15 @@ a {
 } 
 @media (max-width: 600px) {
   
+  .search-tags .swiper-slide{
+    padding: 10px;
+    box-sizing: border-box;
+  }
   .search-tags p{
-    width: 50%;
-    
+    width: 100%;
+  }
+  .control-search{
+    width: 100%;
   }
 }
 
@@ -246,6 +256,7 @@ a {
   flex: 1;
   background: transparent;
   height: 100%;
+  color: #171717;
 }
 .msger-send-btn {
   margin-left: 10px;
@@ -292,4 +303,8 @@ a {
 
 .blog_post_image img{
   height: 250px;
+}
+
+.portfolio_image_wrap img{
+  width: 100%;
 }

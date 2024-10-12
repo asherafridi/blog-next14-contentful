@@ -270,11 +270,11 @@ const Header = () => {
                                             </div>
                                         </li>
                                         <li><Link href="/portfolio">Portfolio</Link></li>
-                                        <li><Link href="/gpt">GPT</Link></li>
+                                        <li><Link href="/gpt">ChatZone</Link></li>
                                         <li><Link href="/meet">Meet Now</Link></li>
 
                                     </ul>
-                                </div>
+                                </div>  
                             </nav>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-5">

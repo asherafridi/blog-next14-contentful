@@ -8,22 +8,24 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Add autoplay module CSS
 
-import {Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 
 const suggestions = [
     "Increase my customer lifetime value",
-    "Drive profitability of e-commerce",
-    "Develop resilience in my supply chain",
-    "Modernize my legacy technology stack",
-    "Learn what Publicis Sapient does",
     "Increase my customer lifetime value",
-    "Drive profitability of e-commerce",
-    "Develop resilience in my supply chain",
-    "Modernize my legacy technology stack",
-    "Learn what Publicis Sapient does",
-    "Learn what Publicis Sapient does",
-    "Learn what Publicis Sapient does"
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
+    "Increase my customer lifetime value",
 ];
 
 const Hero = () => {
@@ -41,7 +43,7 @@ const Hero = () => {
                         </div>
                         <p className='search-suggest '>Type in your prompt above or try one of these suggestions:</p>
                         <Swiper
-                            modules={[ Autoplay]} // Make sure Autoplay is included here
+                            modules={[Autoplay]} // Make sure Autoplay is included here
                             spaceBetween={2}
                             slidesPerView={3}
                             slidesPerGroup={3}
@@ -53,11 +55,26 @@ const Hero = () => {
                                 disableOnInteraction: false, // Continue autoplay after user interaction
                                 pauseOnMouseEnter: true // Pauses autoplay on hover
                             }}
+
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1, // Show 1 slide on mobile screens
+                                    slidesPerGroup: 1, // Group 1 slide at a time on mobile
+                                },
+                                768: {
+                                    slidesPerView: 2, // Show 2 slides for tablet-sized screens
+                                    slidesPerGroup: 2, // Group 2 slides at a time
+                                },
+                                1024: {
+                                    slidesPerView: 3, // Show 3 slides for desktop screens
+                                    slidesPerGroup: 3, // Group 3 slides at a time
+                                },
+                            }}
                             className='search-tags d-flex'
                         >
                             {suggestions.map((suggestion, idx) => (
                                 <SwiperSlide key={idx}>
-                                    <p><Link href="/">{suggestion}</Link></p>
+                                    <p><Link href={`/gpt?initial-message=${suggestion}`}>{suggestion}</Link></p>
                                 </SwiperSlide>
                             ))}
                         </Swiper>

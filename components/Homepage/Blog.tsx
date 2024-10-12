@@ -14,7 +14,6 @@ export default async function BlogSection() {
         limit: 3,
     });
         blogPosts = res.items;
-        console.log('Contentful Data:', blogPosts); // Log to validate data fetching
     } catch (error) {
         console.error('Error fetching Contentful data:', error);
     }

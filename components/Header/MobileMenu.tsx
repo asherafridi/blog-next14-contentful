@@ -9,28 +9,11 @@ const menus = [
         id: 1,
         title: 'Home',
         link: '/home',
-        submenu: [
-            {
-                id: 11,
-                title: 'IT Solution',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Software Company',
-                link: '/home_software_company'
-            },
-            {
-                id: 13,
-                title: 'Business Consulting',
-                link: '/home_business_consulting'
-            }
-        ]
     },
     {
-        id: 3,
-        title: 'Pages',
-        link: '/portfolio',
+        id: 2,
+        title: 'Services',
+        link: '/services',
         submenu: [
             {
                 id: 31,
@@ -52,69 +35,23 @@ const menus = [
                 title: 'Team',
                 link: '/team'
             },
-            {
-                id: 3454,
-                title: 'Team Details',
-                link: '/team-single/Atticus-Sterling'
-            }
         ]
+    },
+    {
+        id: 3,
+        title: 'Portfolio',
+        link: '/portfolio',
     },
     {
         id: 4,
-        title: 'Service',
-        link: '/service',
-        submenu: [
-            {
-                id: 41,
-                title: 'Service',
-                link: '/service'
-            },
-            {
-                id: 42,
-                title: 'Service Details',
-                link: '/service-single/IT-Management-Services'
-            }
-        ]
+        title: 'ChatZone',
+        link: '/gpt',
     },
     {
         id: 5,
-        title: 'Portfolio',
-        link: '/porfolio',
-        submenu: [
-            {
-                id: 51,
-                title: 'Portfolio',
-                link: '/porfolio'
-            },
-            {
-                id: 52,
-                title: 'Portfolio Details',
-                link: '/portfolio_details/Explore-Our-IT-Solutions'
-            }
-        ]
+        title: 'Meet Now',
+        link: '/meet',
     },
-    {
-        id: 6,
-        title: 'Blog',
-        link: '/blog',
-        submenu: [
-            {
-                id: 61,
-                title: 'Blog',
-                link: '/blog'
-            },
-            {
-                id: 62,
-                title: 'Blog Details',
-                link: '/blog-single/How-Our-Software-Solutions-Drive-Insights.'
-            },
-        ]
-    },
-    {
-        id: 88,
-        title: 'Contact',
-        link: '/contact',
-    }
 
 
 ]
