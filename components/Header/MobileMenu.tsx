@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ListItem from "@mui/material/ListItem"; // Correct import
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ const MobileMenu = () => {
     return (
         <ul className="main_menu_list clearfix">
             {menus.map((item) => (
-                <ListItem className={item.id === openId ? 'active' : undefined} key={item.id}>
+                <ListItem  key={item.id}>
                     
                         <Link href={item.link} onClick={() => window.scrollTo(0, 0)} className="active">
                             {item.title}
