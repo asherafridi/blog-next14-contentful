@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-import Project from './ProjectApi';
 import 'swiper/swiper-bundle.css'; // Import the Swiper CSS
 import { Pagination, Navigation, A11y } from 'swiper/modules'; // Import required modules
 import client from '@/lib/contentfulClient';

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import client from '@/lib/contentfulClient';
-import icon1 from '@/public/images/icons/icon_calendar.svg';
 import BreadCrumb from '@/components/Breadcrumb';
 
 const BlogList = () => {

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 // Extend the window object for SpeechRecognition
 declare global {
@@ -22,7 +22,7 @@ const Page = () => {
   const router = useRouter(); // Get the router object
   const searchParams = useSearchParams(); // Get search parameters
   const [messages, setMessages] = useState<JSXMessage[]>([
-    { sender: "GPT", text: "Hi, welcome to SimpleChat! Go ahead and send me a message. 😄" },
+    { sender: "GPT", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -157,7 +157,7 @@ const Page = () => {
     <div className="row gpt">
       <div className="col-md-3 sidebar">
         <h2>
-          Welcome to GPT, CloudZone IT generative AI tool guiding you to the answers you need about digital business
+          Welcome to ChatZone, CloudZone IT generative AI tool guiding you to the answers you need about digital business
           transformation. What issue can we solve for you today?
         </h2>
       </div>
