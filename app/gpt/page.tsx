@@ -39,7 +39,7 @@ const ChatComponent = () => {
         const transcript = event.results[0][0].transcript;
         setInput(transcript);
         setIsListening(false);
-        setShouldSend(true);
+        setShouldSend(!shouldSend);
       };
 
       recognition.onend = () => setIsListening(false);
