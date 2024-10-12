@@ -14,28 +14,6 @@ const menus = [
         id: 2,
         title: 'Services',
         link: '/services',
-        submenu: [
-            {
-                id: 31,
-                title: 'Case Studies',
-                link: '/portfolio'
-            },
-            {
-                id: 3222,
-                title: 'Our Pricing',
-                link: '/pricing'
-            },
-            {
-                id: 322,
-                title: 'About Us',
-                link: '/about'
-            },
-            {
-                id: 345,
-                title: 'Team',
-                link: '/team'
-            },
-        ]
     },
     {
         id: 3,
