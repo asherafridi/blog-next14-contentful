@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import SwiperCore, { Autoplay, Pagination } from "swiper";
+import SwiperCore from "swiper";
+import { Autoplay, Pagination } from 'swiper/modules';
 import pimg1 from '@/public/images/technology/365.webp'
 import pimg2 from '@/public/images/technology/aws.webp'
 import pimg3 from '@/public/images/technology/azure.png'
