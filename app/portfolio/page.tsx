@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import client from '@/lib/contentfulClient';
 import BreadCrumb from '@/components/Breadcrumb';
-import PartnerSection from '@/components/Homepage/Partners';
 
 const BlogList = () => {
 
