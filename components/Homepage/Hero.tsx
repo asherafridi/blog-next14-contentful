@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Add autoplay module CSS
 
-import { Autoplay,Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const suggestions = [
     "Data Center Modernization",
