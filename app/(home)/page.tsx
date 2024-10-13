@@ -14,8 +14,12 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Loading from "../loading";
 
 export default function Home() {
+  if (typeof window !== 'undefined') {
+    return Loading();
+}
   return (
     <>
     <Hero />
