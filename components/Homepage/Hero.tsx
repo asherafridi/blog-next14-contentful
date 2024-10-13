@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Add autoplay module CSS
 
-import { Autoplay } from 'swiper/modules';
+import { Autoplay,Pagination } from 'swiper/modules';
 
 const suggestions = [
     "Data Center Modernization",
@@ -94,7 +94,6 @@ const Hero = () => {
                             slidesPerGroup={3}
                             speed={1000}
                             loop={true}
-                            pagination={{ clickable: true }}
                             autoplay={{
                                 delay: 3000, // Set a reasonable delay (3 seconds)
                                 disableOnInteraction: false, // Continue autoplay after user interaction
