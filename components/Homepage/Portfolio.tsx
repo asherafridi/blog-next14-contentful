@@ -66,7 +66,7 @@ const ProjectSection = async () => {
                         parallax={true}
                         breakpoints={{
                             1025: {
-                                slidesPerView: 2,
+                                slidesPerView: 3,
                             },
                         }}
                     >
