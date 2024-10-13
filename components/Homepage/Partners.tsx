@@ -103,7 +103,7 @@ const PartnerSection = () => {
             <div className="container">
                 <div className="heading_block text-center">
                     <h2 className="heading_text mb-0">
-                        "Our Tech Portfolio"
+                        Our Tech Portfolio
                     </h2>
                 </div>
                 <div className="client_logo_carousel swiper no_style">
