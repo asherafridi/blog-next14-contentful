@@ -9,6 +9,12 @@ import ServiceSection from "@/components/Homepage/Services";
 import TechnologySection from "@/components/Homepage/Technology";
 import Testimonial from "@/components/Homepage/Testimonial";
 
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 export default function Home() {
   return (
     <>

@@ -1,10 +1,6 @@
 "use client"
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import SwiperCore from "swiper";
 import { Autoplay, Pagination } from 'swiper/modules';
 import pimg1 from '@/public/images/technology/365.webp'
