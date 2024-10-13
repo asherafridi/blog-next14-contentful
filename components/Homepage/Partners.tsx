@@ -37,7 +37,7 @@ const partners = [
     },
 ]
 
-let settings = {
+const settings = {
     dots: false,
     infinite: true,
     speed: 3000,
