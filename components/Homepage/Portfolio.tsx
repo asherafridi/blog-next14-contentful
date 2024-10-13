@@ -3,9 +3,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-import 'swiper/swiper-bundle.css'; // Import the Swiper CSS
 import { Pagination, Navigation, A11y } from 'swiper/modules'; // Import required modules
 import client from '@/lib/contentfulClient';
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const ProjectSection = async () => {
     // Fetching Contentful data directly in the component
