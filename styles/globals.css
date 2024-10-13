@@ -308,3 +308,8 @@ a {
 .portfolio_image_wrap img{
   width: 100%;
 }
+
+
+.client_logo_item{
+  height: auto!important;
+}

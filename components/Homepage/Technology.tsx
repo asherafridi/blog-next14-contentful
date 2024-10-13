@@ -3,88 +3,57 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 
-import cnIcon1 from '/public/images/icons/icon_php.svg'
-import cnIcon2 from '/public/images/icons/icon_javascript.svg'
-import cnIcon3 from '/public/images/case/icon_elephent.svg'
-import cnIcon4 from '/public/images/icons/icon_swift.svg'
-import cnIcon5 from '/public/images/icons/icon_typescript.svg'
-import cnIcon6 from '/public/images/icons/icon_python.svg'
-import cnIcon7 from '/public/images/icons/icon_g318.svg'
-import cnIcon8 from '/public/images/icons/icon_java.svg'
-import cnIcon9 from '/public/images/icons/icon_ruby.svg'
-import cnIcon10 from '/public/images/icons/icon_c_plus.svg'
-import cnIcon11 from '/public/images/icons/icon_react_js.svg'
-import cnIcon12 from '/public/images/icons/icon_laravel.svg'
+import Icon1 from '@/public/images/technology/365.webp'
+import Icon2 from '@/public/images/technology/aws.webp'
+import Icon3 from '@/public/images/technology/azure.png'
+import Icon4 from '@/public/images/technology/cloud.png'
+import Icon5 from '@/public/images/technology/copilot.png'
 import Image from 'next/image';
 
 
 const TechnologyList = [
     {
         Id: '1',
-        sIcon: cnIcon1,
-        title: 'PHP',
+        sIcon: Icon1,
+        title: 'Microsoft 365',
+        desc : "Reach and exceed your company goals with Microsoft 365. Manage your content and tools—like productivity apps, email, appointment scheduling, video meetings, chat, and enterprise-grade security—all in one place."
     },
     {
         Id: '2',
-        sIcon: cnIcon2,
-        title: 'JavaScript',
+        sIcon: Icon2,
+        title: 'AWS',
+        desc:"Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally."
     },
     {
         Id: '3',
-        sIcon: cnIcon3,
-        title: 'PostgreSQL',
+        sIcon: Icon3,
+        title: 'Azure',
+        desc:"Microsoft Azure is one of the widely used cloud computing platforms. Azure provides a wide variety of services such as cloud storage, compute services, network services, cognitive services, databases, analytics, and IoT."
     },
     {
         Id: '4',
-        sIcon: cnIcon4,
-        title: 'Swift',
+        sIcon: Icon4,
+        title: 'Google Cloud',
+        desc:"Bring the simplicity, scale, security, and intelligence of Google’s information approach to your organization. Google offers a complete data foundation to unify all workloads and manage the entire data life cycle."
     },
     {
         Id: '5',
-        sIcon: cnIcon5,
-        title: 'Typescript',
+        sIcon: Icon5,
+        title: 'Microsoft Copilot',
+        desc:"Microsoft Copilot is an AI-powered productivity tool that coordinates LLMs and content in Microsoft Graph with Microsoft 365 productivity apps. Copilot uses Microsoft's Prometheus AI model, which takes advantage of generative AI tools"
     },
     {
-        Id: '6',
-        sIcon: cnIcon6,
-        title: 'Python',
-    },
-    {
-        Id: '7',
-        sIcon: cnIcon7,
-        title: 'G318',
-    },
-    {
-        Id: '8',
-        sIcon: cnIcon8,
-        title: 'Java',
-    },
-    {
-        Id: '9',
-        sIcon: cnIcon9,
-        title: 'Ruby',
-    },
-    {
-        Id: '10',
-        sIcon: cnIcon10,
-        title: 'C++',
-    },
-    {
-        Id: '11',
-        sIcon: cnIcon11,
-        title: 'React Js',
-    },
-    {
-        Id: '12',
-        sIcon: cnIcon12,
-        title: 'Laraval',
+        Id: '5',
+        sIcon: Icon5,
+        title: 'Microsoft copilot for work',
+        desc:"Microsoft Copilot for Microsoft 365 is a sophisticated processing and orchestration engine that provides AI-powered productivity capabilities by coordinating MS Office Apps."
     },
 ]
 
 
 const TechnologySection = () => {
 
-    const [activeTab, setActiveTab] = useState('3');
+    const [activeTab, setActiveTab] = useState('1');
 
     const toggle = (tab:any) => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -110,43 +79,7 @@ const TechnologySection = () => {
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}
                         >
-                            Web Platform
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '2' })}
-                            onClick={() => { toggle('2'); }}
-                        >
-
-                            Databases
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '3' })}
-                            onClick={() => { toggle('3'); }}
-                        >
-
-                            Cloud & DevOps
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '4' })}
-                            onClick={() => { toggle('4'); }}
-                        >
-
-                            Mobile Apps
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '5' })}
-                            onClick={() => { toggle('5'); }}
-                        >
-
-                            Other Frameworks
+                            CLOUD INFRASTRUCTURE
                         </NavLink>
                     </NavItem>
                 </Nav>
@@ -154,78 +87,15 @@ const TechnologySection = () => {
                 <TabContent activeTab={activeTab}>
                     <TabPane tabId="1">
                         <div className="web_development_technologies row justify-content-center">
-                            {TechnologyList.slice(0, 12).map((technology, cnt) => (
-                                <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={cnt}>
+                            {TechnologyList.map((technology, cnt) => (
+                                <div className="col-lg-2 col-md-3 col-sm-4 col-12" key={cnt}>
                                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                                         <div className="iconbox_icon">
                                             <Image src={technology.sIcon} alt="" />
                                         </div>
                                         <div className="iconbox_content">
                                             <h3 className="iconbox_title mb-0">{technology.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </TabPane>
-                    <TabPane tabId="2">
-                        <div className="web_development_technologies row justify-content-center">
-                            {TechnologyList.slice(3, 12).map((technology, cnt) => (
-                                <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={cnt}>
-                                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                                        <div className="iconbox_icon">
-                                            <Image src={technology.sIcon} alt="" />
-                                        </div>
-                                        <div className="iconbox_content">
-                                            <h3 className="iconbox_title mb-0">{technology.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </TabPane>
-                    <TabPane tabId="3">
-                        <div className="web_development_technologies row justify-content-center">
-                            {TechnologyList.slice(5, 12).map((technology, cnt) => (
-                                <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={cnt}>
-                                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                                        <div className="iconbox_icon">
-                                            <Image src={technology.sIcon} alt="" />
-                                        </div>
-                                        <div className="iconbox_content">
-                                            <h3 className="iconbox_title mb-0">{technology.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </TabPane>
-                    <TabPane tabId="4">
-                        <div className="web_development_technologies row justify-content-center">
-                            {TechnologyList.slice(1, 12).map((technology, cnt) => (
-                                <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={cnt}>
-                                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                                        <div className="iconbox_icon">
-                                            <Image src={technology.sIcon} alt="" />
-                                        </div>
-                                        <div className="iconbox_content">
-                                            <h3 className="iconbox_title mb-0">{technology.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </TabPane>
-                    <TabPane tabId="5">
-                        <div className="web_development_technologies row justify-content-center">
-                            {TechnologyList.slice(3, 10).map((technology, cnt) => (
-                                <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={cnt}>
-                                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                                        <div className="iconbox_icon">
-                                            <Image src={technology.sIcon} alt="" />
-                                        </div>
-                                        <div className="iconbox_content">
-                                            <h3 className="iconbox_title mb-0">{technology.title}</h3>
+                                            <p className='iconbox_description mt-4'>{technology?.desc}</p>
                                         </div>
                                     </div>
                                 </div>

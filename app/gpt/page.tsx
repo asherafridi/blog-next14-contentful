@@ -21,7 +21,7 @@ interface JSXMessage {
 const ChatComponent = () => {
   const searchParams = useSearchParams(); // Get search parameters
   const [messages, setMessages] = useState<JSXMessage[]>([
-    { sender: "GPT", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
+    { sender: "Assistant", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -95,15 +95,15 @@ const ChatComponent = () => {
 
       if (response.ok) {
         const formattedResponse = formatResponse(data.response);
-        const newMessageList = [...newMessages, { sender: "GPT", text: formattedResponse }];
+        const newMessageList = [...newMessages, { sender: "Assistant", text: formattedResponse }];
         setMessages(newMessageList);
       } else {
-        setMessages([...newMessages, { sender: "GPT", text: "Error: Failed to fetch response." }]);
+        setMessages([...newMessages, { sender: "Assistant", text: "Error: Failed to fetch response." }]);
       }
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      setMessages([...newMessages, { sender: "GPT", text: "Error: Something went wrong." }]);
+      setMessages([...newMessages, { sender: "Assistant", text: "Error: Something went wrong." }]);
     }
   };
 

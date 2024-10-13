@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import client from '@/lib/contentfulClient';
 import BreadCrumb from '@/components/Breadcrumb';
+import PartnerSection from '@/components/Homepage/Partners';
 
 const BlogList = () => {
 
@@ -43,6 +44,7 @@ const BlogList = () => {
 
       <BreadCrumb pageTitle="Our Recent Work" pagesub={'Portfolio 😍'} pageTop={'Our'} />
       <section className="portfolio_section section_space bg-light">
+        
         <div className="container">
 
           <div className="filter_elements_wrapper row">

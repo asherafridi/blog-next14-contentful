@@ -22,6 +22,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-modal-video": "^2.0.2",
+    "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "reactstrap": "^9.2.3",
     "sass": "^1.79.4",
@@ -35,6 +36,7 @@
     "@types/react-dom": "^18",
     "@types/react-html-parser": "^2.0.6",
     "@types/react-modal-video": "^1.2.3",
+    "@types/react-slick": "^0.23.13",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "typescript": "^5"

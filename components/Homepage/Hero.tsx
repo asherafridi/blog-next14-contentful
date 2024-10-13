@@ -86,7 +86,7 @@ const Hero = () => {
                                     <i className="fa-solid fa-arrow-up"></i>
                                 </button>
                             </form>
-                        <p className='search-suggest '>Type in your prompt above or try one of these suggestions:</p>
+                        <p className='search-suggest '>Enter your prompt in the box above, or try using one of the suggested options below:</p>
                         <Swiper
                             modules={[Autoplay]} // Make sure Autoplay is included here
                             spaceBetween={2}
