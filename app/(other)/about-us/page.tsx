@@ -14,7 +14,7 @@ export default function Home() {
         <>
 
             <main className="page_content about-page">
-            <BreadCrumb pageTop="About" pagesub="More CZIT 😃" pageTitle="About Us" />
+            <BreadCrumb pageTop="About" pagesub="More CZIT 😃" pageTitle="What We Do" />
                 <section className="intro_about_section section_space bg-light">
                     <div className="intro_about_content">
                         <div className="container">

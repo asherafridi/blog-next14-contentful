@@ -111,14 +111,14 @@ const Footer = () => {
                                         <li>
                                             <Link  href="/about-us">
                                                 <span className="icon_list_text">
-                                                    About Us
+                                                    What We Do
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link  href="/meet">
                                                 <span className="icon_list_text">
-                                                    Scedule a Meeting
+                                                    Lets Meet
                                                 </span>
                                             </Link>
                                         </li>

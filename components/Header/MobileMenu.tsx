@@ -3,11 +3,11 @@ import ListItem from "@mui/material/ListItem"; // Correct import
 import Link from 'next/link';
 
 const menus = [
-    { id: 1, title: 'Home', link: '/home' },
+    { id: 1, title: 'Home', link: '/' },
     { id: 2, title: 'Services', link: '/services' },
     { id: 3, title: 'Portfolio', link: '/portfolio' },
     { id: 4, title: 'ChatZone', link: '/gpt' },
-    { id: 5, title: 'Meet Now', link: '/meet' },
+    { id: 5, title: 'Lets Meet', link: '/meet' },
 ];
 
 const MobileMenu = () => {

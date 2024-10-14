@@ -63,7 +63,7 @@ const Header = () => {
                                         </li>
                                         <li><Link href="/portfolio">Portfolio</Link></li>
                                         <li><Link href="/gpt">ChatZone</Link></li>
-                                        <li><Link href="/meet">Meet Now</Link></li>
+                                        <li><Link href="/meet">Lets Meet</Link></li>
 
                                     </ul>
                                 </div>  

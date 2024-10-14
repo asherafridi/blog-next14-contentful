@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-// Extend the window object for SpeechRecognition
 declare global {
   interface Window {
     SpeechRecognition: any;
@@ -15,21 +14,33 @@ let recognition: any;
 
 interface JSXMessage {
   sender: string;
-  text: any; // Or `Element[]`, depending on your JSX setup
+  text: any;
 }
 
 const ChatComponent = () => {
-  const searchParams = useSearchParams(); // Get search parameters
-  const [messages, setMessages] = useState<JSXMessage[]>([
-    { sender: "Assistant", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
-  ]);
+  const searchParams = useSearchParams();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
-  const [shouldSend,setShouldSend] = useState(false);
+  const [shouldSend, setShouldSend] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
 
-  // Handle SpeechRecognition setup
+  const names = ["Rosie", "Alexa", "Amanda", "Sara", "Maya"];
+  const [assistantName, setAssistantName] = useState(""); // Initially empty
+
+  const [messages, setMessages] = useState<JSXMessage[]>([
+    { sender: assistantName || "Assistant", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
+  ]);
+
+  useEffect(() => {
+    // Only set the assistant name after the component mounts
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    setAssistantName(randomName);
+
+    // Update the initial message with the assistant's name
+    setMessages([{ sender: randomName, text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" }]);
+  }, []);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -56,19 +67,17 @@ const ChatComponent = () => {
     }
   }, [messages]);
 
-  // Check for initial message in the URL and update the input
   useEffect(() => {
-    const initialMessage = searchParams.get("initial-message"); // Get the 'initial-message' query param
+    const initialMessage = searchParams.get("initial-message");
     if (initialMessage && typeof initialMessage === "string") {
-      setInput(decodeURIComponent(initialMessage)); // Set the input to the initial message from the URL
+      setInput(decodeURIComponent(initialMessage));
       setShouldSend(true);
     }
-  }, [searchParams]); // Run this effect when the query parameters change
+  }, [searchParams]);
 
-  // Handle sending the message after input has been set
   useEffect(() => {
     if (shouldSend && input.trim() !== "") {
-      handleSendMessage(); // Send the message automatically after input is updated
+      handleSendMessage();
     }
   }, [shouldSend]);
 
@@ -95,24 +104,22 @@ const ChatComponent = () => {
 
       if (response.ok) {
         const formattedResponse = formatResponse(data.response);
-        const newMessageList = [...newMessages, { sender: "Assistant", text: formattedResponse }];
+        const newMessageList = [...newMessages, { sender: assistantName, text: formattedResponse }];
         setMessages(newMessageList);
       } else {
-        setMessages([...newMessages, { sender: "Assistant", text: "Error: Failed to fetch response." }]);
+        setMessages([...newMessages, { sender: assistantName, text: "Error: Failed to fetch response." }]);
       }
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      setMessages([...newMessages, { sender: "Assistant", text: "Error: Something went wrong." }]);
+      setMessages([...newMessages, { sender: assistantName, text: "Error: Something went wrong." }]);
     }
   };
 
   const formatResponse = (response: string) => {
-    // Split the response into lines and process each line
     const formatted = response.split("\n").map((line, index) => (
       <span key={index}>
         {line.split(/(https?:\/\/[^\s]+|\*\*[^*]+\*\*)/g).map((part, i) => {
-          // Handle URLs
           if (part.match(/https?:\/\/[^\s]+/)) {
             return (
               <a
@@ -126,14 +133,10 @@ const ChatComponent = () => {
               </a>
             );
           }
-
-          // Handle bold text (surrounded by **)
           if (part.match(/\*\*[^*]+\*\*/)) {
-            const boldText = part.slice(2, -2); // Remove the '**' for display
+            const boldText = part.slice(2, -2);
             return <strong key={i}>{boldText}</strong>;
           }
-
-          // Return the non-link, non-bold part as is
           return part;
         })}
         <br />
@@ -170,7 +173,7 @@ const ChatComponent = () => {
                   <div className="msg-info">
                     <div className="msg-info-name">{msg.sender}</div>
                   </div>
-                  <div className="msg-text">{msg.text} {/* Render rich text */}</div>
+                  <div className="msg-text">{msg.text}</div>
                 </div>
               </div>
             ))}
