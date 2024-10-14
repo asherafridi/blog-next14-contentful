@@ -4,13 +4,13 @@ import BlogSection from "@/components/Homepage/Blog";
 import FaqSection from "@/components/Homepage/Faq";
 import Hero from "@/components/Homepage/Hero";
 // import PartnerSection from "@/components/Homepage/Partners";
-import ProjectSection from "@/components/Homepage/Portfolio";
+// import ProjectSection from "@/components/Homepage/Portfolio";
 import ServiceSection from "@/components/Homepage/Services";
 import TechnologySection from "@/components/Homepage/Technology";
-import Testimonial from "@/components/Homepage/Testimonial";
-import dynamic from "next/dynamic";
+// import Testimonial from "@/components/Homepage/Testimonial";
+// import dynamic from "next/dynamic";
 
-const PartnerSection = dynamic(() => import('@/components/Homepage/Partners'), { ssr: false });
+// const PartnerSection = dynamic(() => import('@/components/Homepage/Partners'), { ssr: true });
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -20,20 +20,17 @@ import "swiper/css/scrollbar";
 import Loading from "../loading";
 
 export default function Home() {
-  if (typeof window !== 'undefined') {
-    return Loading();
-}
   return (
     <>
     <Hero />
     <About />
     <ServiceSection />
     <TechnologySection />
-    <Testimonial />
+    {/* <Testimonial /> */}
     <FaqSection />
-    <ProjectSection />
+    {/* <ProjectSection /> */}
     <BlogSection />
-    <PartnerSection />
+    {/* <PartnerSection /> */}
      </>
   );
 }
