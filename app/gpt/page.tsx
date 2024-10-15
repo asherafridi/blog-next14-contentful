@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
+import gif from "@/public/images/about/giphy.webp";
 
 declare global {
   interface Window {
@@ -158,11 +160,13 @@ const ChatComponent = () => {
 
   return (
     <div className="row gpt">
-      <div className="col-md-3 sidebar d-none d-sm-flex">
-        <h2>
+      <div className="col-md-3 sidebar d-none d-sm-flex" style={{backgroundColor:"#72C5DB"
+      }}>
+        <Image src={gif} alt="fit" width={250} height={250} />
+        {/* <h2>
           Welcome to ChatZone, CloudZone IT generative AI tool guiding you to the answers you need about digital business
           transformation. What issue can we solve for you today?
-        </h2>
+        </h2> */}
       </div>
       <div className="col-md-9">
         <section className="msger">
@@ -180,7 +184,7 @@ const ChatComponent = () => {
             {isLoading && (
               <div className="msg left-msg">
                 <div className="msg-bubble">
-                  <div className="msg-text">Loading...</div>
+                  <div className="msg-text">typing...</div>
                 </div>
               </div>
             )}

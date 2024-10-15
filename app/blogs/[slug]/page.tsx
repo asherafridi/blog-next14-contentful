@@ -6,6 +6,7 @@ import client from '@/lib/contentfulClient';
 import BreadCrumb from '@/components/Breadcrumb';
 import CtaSection from '@/components/CtaSection';
 import BlogSingle from '@/components/BlogSingle';
+import Loading from '@/app/loading';
 
 const Page = ({ params }: { params: { slug: string } }) => {
   const { slug } = params; // Get the slug from the URL
@@ -38,7 +39,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
   }, [slug]); // Effect runs when slug changes
 
   if (loading) {
-    return <p>Loading...</p>; // Show loading state
+    return <Loading />; // Show loading state
   }
 
   if (error) {
