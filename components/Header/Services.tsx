@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import client from '@/lib/contentfulClient';
 
 // Reusable component for rendering links
