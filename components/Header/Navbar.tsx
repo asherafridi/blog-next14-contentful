@@ -77,7 +77,7 @@ const Header = () => {
                                     </button>
                                 </li>
                                 <li>
-                                    <Link  className="btn btn-outline-light" href="/pricing">
+                                    <Link  className="btn btn-outline-light" href="https://sys.webstartup.io/login">
                                         <span className="btn_label" data-text="Login">Login</span>
                                         <span className="btn_icon">
                                             <i className="fa-solid fa-arrow-up-right"></i>

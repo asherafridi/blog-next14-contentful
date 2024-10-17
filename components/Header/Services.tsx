@@ -10,9 +10,9 @@ const LinkList = ({ title, items }:{title:any,items:any}) => (
         <ul className="icon_list unordered_list_block">
             {items.map((item:any, index:any) => (
                 <li key={index}>
-                    <Link href={`/services/${item.fields.slug}`}>
+                    <a  href={`/services/${item.fields.slug}`}>
                         <span className="icon_list_text">{item.fields.title}</span>
-                    </Link>
+                    </a>
                 </li>
             ))}
         </ul>

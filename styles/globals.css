@@ -313,3 +313,52 @@ a {
 .client_logo_item{
   height: auto!important;
 }
+
+.custom-modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.custom-modal-body {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.custom-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.custom-input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.custom-submit-btn {
+  background-color: #72C5DB;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.custom-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.custom-modal-header{
+  background-color: #72C5DB;
+  color: #fff;
+}
+
+
+
+.portfolio_block .portfolio_image_wrap img{
+  height: 250px!important;
+}

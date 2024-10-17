@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import gif from "@/public/images/about/giphy.webp";
+import dynamic from "next/dynamic";
+
+
+const DataEntryModal = dynamic(() => import('./Dialouge'), { ssr: false });
 
 declare global {
   interface Window {
@@ -217,6 +221,7 @@ const ChatComponent = () => {
 
 const Page = () => (
   <Suspense fallback={<div>Loading...</div>}>
+    <DataEntryModal />
     <ChatComponent />
   </Suspense>
 );

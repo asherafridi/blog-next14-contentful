@@ -68,9 +68,9 @@ const Footer = () => {
                         <div className="row justify-content-lg-between">
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="footer_widget pe-md-3">
-                                    <h2 className="footer_info_title">Newsletter</h2>
+                                    <h2 className="footer_info_title">Get In Touch</h2>
                                     <p>
-                                        Sign up to Techco weekly newsletter to get the latest updates.
+                                        Contact us today to learn more about how our CLOUD solutions can transform your business.
                                     </p>
                                     <form className="footer_newslatter" onSubmit={SubmitHandler}>
                                         <label htmlFor="footer_mail_input">
@@ -80,9 +80,9 @@ const Footer = () => {
                                         <button type="submit"><i className="fa-solid fa-paper-plane"></i></button>
                                     </form>
                                     <ul className="social_links_block unordered_list">
-                                        <li><Link  href="/">Facebook</Link></li>
-                                        <li><Link  href="/">Twitter</Link></li>
-                                        <li><Link  href="/">Linkdin</Link></li>
+                                        <li><Link href="/">Facebook</Link></li>
+                                        <li><Link href="/">Twitter</Link></li>
+                                        <li><Link href="/">Linkdin</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ const Footer = () => {
                                         {services.map((service, srv) => (
                                             <li key={srv}>
                                                 {service ?
-                                                    <Link  href={'/service/[slug]'} as={`/services/${service}`}>
+                                                    <Link href={'/service/[slug]'} as={`/services/${service}`}>
                                                         <span className="icon_list_text">
                                                             {service}
                                                         </span>
@@ -109,28 +109,28 @@ const Footer = () => {
                                     <h3 className="footer_info_title">Information</h3>
                                     <ul className="icon_list unordered_list_block">
                                         <li>
-                                            <Link  href="/about-us">
+                                            <Link href="/about-us">
                                                 <span className="icon_list_text">
                                                     What We Do
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/meet">
+                                            <Link href="/meet">
                                                 <span className="icon_list_text">
                                                     Lets Meet
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/portfolio">
+                                            <Link href="/portfolio">
                                                 <span className="icon_list_text">
                                                     Our Portfolio
                                                 </span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link  href="/contact-us">
+                                            <Link href="/contact-us">
                                                 <span className="icon_list_text">
                                                     Contact Us
                                                 </span>
