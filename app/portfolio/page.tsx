@@ -61,7 +61,7 @@ const BlogList = () => {
                   </div>
                   <div className="portfolio_content">
                     <h3 className="portfolio_title">
-                      <Link  href={`/portfolio/${blog.fields.slug}`} as={`/portfolio/${blog.fields.slug}`}>
+                      <Link  href={`${blog.fields.link}`} as={`${blog.fields.ling}`}>
                       {blog.fields.title}
                       </Link>
                     </h3>

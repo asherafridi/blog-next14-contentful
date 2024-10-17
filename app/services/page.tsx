@@ -51,7 +51,7 @@ const BlogList = () => {
 
 
               <div className="col-lg-4" key={Bitem}>
-                <div className="portfolio_block portfolio_layout_2">
+                <div className="service portfolio_block portfolio_layout_2">
                   <div className="portfolio_image">
                     <Link  className="portfolio_image_wrap bg-light" href={`/services/${blog.fields.slug}`} as={`/services/${blog.fields.slug}`}>
                       <Image src={`https:${blog.fields.featuredImage.fields?.file.url}`} alt="Mobile App Design" width={1000} height={1000}/>
