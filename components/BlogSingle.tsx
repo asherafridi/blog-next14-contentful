@@ -1,6 +1,8 @@
 import React from 'react';
 import icon1 from '/public/images/icons/icon_calendar.svg'
 
+import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'; // Import the renderer
 
@@ -8,6 +10,19 @@ import Link from 'next/link'
 import Image from 'next/image';
 
 const BlogSingle = (props: any) => {
+
+    const options = {
+        renderNode: {
+            [BLOCKS.EMBEDDED_ASSET]: (node:any) => {
+                const { file, title } = node.data.target.fields;
+                const url = file.url;
+                const alt = title || "Contentful Asset";
+    
+                return <img src={url} alt={alt} />;
+            },
+        },
+        // You can also handle other blocks or inlines as needed
+    };
 
     const BlogDetails = props.blog;
 
@@ -48,7 +63,7 @@ const BlogSingle = (props: any) => {
                 <div className="section_space pb-0">
                     <div className="row">
                         <div className='col-md-12'>
-                            {BlogDetails?.fields.content && documentToReactComponents(BlogDetails.fields.content)}
+                            {BlogDetails?.fields.content && documentToReactComponents(BlogDetails.fields.content,options)}
                         </div>
                     </div>
                 </div>

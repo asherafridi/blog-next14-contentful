@@ -23,7 +23,8 @@ const Page = ({ params }: { params: { slug: string } }) => {
         });
 
         if (res.items.length > 0) {
-          setBlog(res.items[0]); // Set the fetched blog post
+          setBlog(res.items[0]);
+          console.log(res.items[0].fields.content) // Set the fetched blog post
         } else {
           setError('Blog post not found.'); // Set error if no post found
         }
