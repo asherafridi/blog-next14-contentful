@@ -118,7 +118,7 @@ const ChatComponent = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://3.106.186.34:85/chat", {
+      const response = await fetch("https://chat.vetaai.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
