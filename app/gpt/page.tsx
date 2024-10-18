@@ -37,7 +37,7 @@ const ChatComponent = () => {
     const decodedCookie = decodeURIComponent(document.cookie);
     const cookieArray = decodedCookie.split(';');
     for (let i = 0; i < cookieArray.length; i++) {
-      let cookie = cookieArray[i].trim();
+      const cookie = cookieArray[i].trim();
       if (cookie.indexOf(name) === 0) {
         return cookie.substring(name.length, cookie.length);
       }
@@ -241,7 +241,6 @@ const ChatComponent = () => {
 };
 
 const Page = () => {
-  const [name,setName] = useState("");
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <DataEntryModal  />
