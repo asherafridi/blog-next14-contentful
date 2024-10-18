@@ -30,6 +30,27 @@ const ChatComponent = () => {
   const [isListening, setIsListening] = useState(false);
   const [shouldSend, setShouldSend] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
+  const [username,setName]= useState("You");
+
+  const getCookie = (cookieName:any) => {
+    const name = cookieName + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i].trim();
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
+    }
+    return ""; // Return empty string if cookie not found
+  };
+
+
+  useEffect(() => {
+    const leadCookie = getCookie('lead'); // Get the 'lead' cookie value
+    setName(leadCookie); // Set the state with the cookie value
+  }, [isLoading]);
+
 
   const names = ["Rosie", "Alexa", "Amanda", "Sara", "Maya"];
   const [assistantName, setAssistantName] = useState(""); // Initially empty
@@ -91,7 +112,7 @@ const ChatComponent = () => {
     if (e) e.preventDefault();
     if (input.trim() === "") return;
 
-    const newMessages = [...messages, { sender: "You", text: input }];
+    const newMessages = [...messages, { sender: username !="" ? username : "You", text: input }];
     setMessages(newMessages);
     setInput("");
     setIsLoading(true);
@@ -102,7 +123,7 @@ const ChatComponent = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ message: input,name:username }),
       });
 
       const data = await response.json();
@@ -219,11 +240,15 @@ const ChatComponent = () => {
   );
 };
 
-const Page = () => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <DataEntryModal />
-    <ChatComponent />
-  </Suspense>
-);
+const Page = () => {
+  const [name,setName] = useState("");
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DataEntryModal setName={setName} />
+      <ChatComponent name={name} />
+    </Suspense>
+  );
+
+}
 
 export default Page;

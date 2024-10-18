@@ -37,7 +37,7 @@ export default function DataEntryModal() {
             const response = await axios.post('https://670e49e1073307b4ee463c70.mockapi.io/czit_leads', formData);
             console.log(response.data);
             alert('Data submitted successfully!');
-            document.cookie = "lead=true";
+            document.cookie = `lead=${formData.name}`;
             handleClose(); // Close the modal on successful submission
 
         } catch (error) {
