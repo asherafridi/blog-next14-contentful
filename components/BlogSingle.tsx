@@ -1,7 +1,7 @@
 import React from 'react';
 import icon1 from '/public/images/icons/icon_calendar.svg'
 
-import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'; // Import the renderer
