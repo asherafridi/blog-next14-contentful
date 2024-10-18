@@ -244,8 +244,8 @@ const Page = () => {
   const [name,setName] = useState("");
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <DataEntryModal setName={setName} />
-      <ChatComponent name={name} />
+      <DataEntryModal  />
+      <ChatComponent  />
     </Suspense>
   );
 
