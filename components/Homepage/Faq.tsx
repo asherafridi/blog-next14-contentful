@@ -52,7 +52,7 @@ const FaqSection = () => {
                         F.A.Q. 
                     </div> 
                     <h2 className="heading_text mb-0"> 
-                        Need a <mark>Support?</mark> 
+                    We are ready to <mark>assist!</mark> 
                     </h2> 
                 </div> 
 

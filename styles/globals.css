@@ -362,3 +362,8 @@ a {
 .service.portfolio_block .portfolio_image_wrap img{
   height: 250px!important;
 }
+
+.login-menu{
+  z-index: 1000;
+  margin-top: 10px;
+}

@@ -66,7 +66,7 @@ const Header = () => {
                                         <li><Link href="/meet">Lets Meet</Link></li>
 
                                     </ul>
-                                </div>  
+                                </div>
                             </nav>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-5">
@@ -76,13 +76,19 @@ const Header = () => {
                                         <i className="far fa-bars"></i>
                                     </button>
                                 </li>
-                                <li>
-                                    <Link  className="btn btn-outline-light" href="https://sys.webstartup.io/login">
+                                <li className='dropdown'>
+
+                                    <Link className="dropdown btn btn-outline-light" href="https://sys.webstartup.io/login">
                                         <span className="btn_label" data-text="Login">Login</span>
                                         <span className="btn_icon">
                                             <i className="fa-solid fa-arrow-up-right"></i>
                                         </span>
                                     </Link>
+
+                                    <ul className="dropdown-menu login-menu" aria-labelledby="portfolio_submenu">
+                                        <li><Link  href="https://sys.webstartup.io/login" target='_blank'>WebStartUp Login</Link></li>
+                                        <li><Link  href="https://dialer.czit.io/" target='_blank'>AI Sys Login</Link></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -93,7 +99,7 @@ const Header = () => {
                         <div className="xb-header-menu-scroll">
                             <div className="xb-menu-close xb-hide-xl xb-close" onClick={() => setMobailState(!mobailActive)}></div>
                             <nav className="xb-header-nav">
-                                <MobileMenu  />
+                                <MobileMenu />
                             </nav>
                         </div>
                     </div>

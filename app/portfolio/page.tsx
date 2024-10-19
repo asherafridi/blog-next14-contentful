@@ -61,7 +61,7 @@ const BlogList = () => {
                   </div>
                   <div className="portfolio_content">
                     <h3 className="portfolio_title">
-                      <Link  href={`${blog.fields.link}`} as={`${blog.fields.link}`}>
+                      <Link  href={`${blog.fields.link}`} as={`${blog.fields.link}`} target='_blank'>
                       {blog.fields.title}
                       </Link>
                     </h3>
