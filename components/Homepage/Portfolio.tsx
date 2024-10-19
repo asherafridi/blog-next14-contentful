@@ -31,7 +31,7 @@ const ProjectSection = async () => {
                                     <span className="badge bg-secondary text-white">Crafting</span>
                                     Success With 😍 Project
                                 </div>
-                                <h2 className="heading_text">Our Recent Best Works</h2>
+                                <h2 className="heading_text">Our Recent Work</h2>
                                 <p className="heading_description mb-0">
                                     Our recent projects highlight our expertise in delivering tailored solutions that meet the unique needs and objectives of our clients, custom software.
                                 </p>

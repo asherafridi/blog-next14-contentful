@@ -366,4 +366,7 @@ a {
 .login-menu{
   z-index: 1000;
   margin-top: 10px;
+  position: absolute;
+  right: 0px!important;
+  left:auto;
 }
