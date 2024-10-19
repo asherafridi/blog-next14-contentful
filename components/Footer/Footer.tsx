@@ -36,7 +36,8 @@ const Footer = () => {
       } else {
         setMessage(result.error || "Failed to subscribe.");
       }
-    } catch (error) {
+    } catch (e) {
+        console.log(e);
       setMessage("An error occurred, please try again later.");
     } finally {
       setLoading(false);
