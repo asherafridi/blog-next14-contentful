@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios'; // You can use fetch if you prefer
 
-export default function DataEntryModal() {
+export default function DataEntryModal( {setusername}:{setusername:any}) {
     const [show, setShow] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -38,6 +38,7 @@ export default function DataEntryModal() {
             console.log(response.data);
             alert('Data submitted successfully!');
             document.cookie = `lead=${formData.name}`;
+            setusername(true);
             handleClose(); // Close the modal on successful submission
 
         } catch (error) {

@@ -23,7 +23,7 @@ interface JSXMessage {
   text: any;
 }
 
-const ChatComponent = () => {
+const ChatComponent = ({isUsername}:{isUsername:any}) => {
   const searchParams = useSearchParams();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +49,7 @@ const ChatComponent = () => {
   useEffect(() => {
     const leadCookie = getCookie('lead'); // Get the 'lead' cookie value
     setName(leadCookie); // Set the state with the cookie value
-  }, [isLoading]);
+  }, [isLoading,isUsername]);
 
 
   const names = ["Rosie", "Alexa", "Amanda", "Sara", "Maya"];
@@ -197,7 +197,7 @@ const ChatComponent = () => {
         <section className="msger">
           <main className="msger-chat" ref={chatRef}>
             {messages.map((msg, index) => (
-              <div key={index} className={`msg ${msg.sender === "You" ? "right-msg" : "left-msg"}`}>
+              <div key={index} className={`msg ${msg.sender === username  ? "right-msg" : "left-msg"}`}>
                 <div className="msg-bubble">
                   <div className="msg-info">
                     <div className="msg-info-name">{msg.sender}</div>
@@ -241,10 +241,11 @@ const ChatComponent = () => {
 };
 
 const Page = () => {
+  const [isUsername,setIsUsername] = useState(false);
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <DataEntryModal  />
-      <ChatComponent  />
+      <DataEntryModal setusername={setIsUsername}  />
+      <ChatComponent isUsername={isUsername} />
     </Suspense>
   );
 
