@@ -36,7 +36,7 @@ const Header = () => {
         <header className="site_header site_header_1">
             <div className="header_top text-center">
                 <div className="container">
-                    <p className="m-0">Subscribe us and receive <b>20% bonus</b> discount on checkout. <Link href="/pricing"><u>Learn more</u> <i className="fa-solid fa-angle-right"></i></Link></p>
+                    <p className="m-0">Subscribe us and receive <b>20% bonus</b> discount on checkout.</p>
                 </div>
             </div>
             <div className={`header_bottom stricky  ${isSticky ? 'stricked-menu stricky-fixed' : ''}`}>
@@ -86,8 +86,9 @@ const Header = () => {
                                     </Link>
 
                                     <ul className="dropdown-menu login-menu" aria-labelledby="portfolio_submenu">
-                                        <li><Link  href="https://sys.webstartup.io/login" target='_blank'>WebStartUp Login</Link></li>
-                                        <li><Link  href="https://dialer.czit.io/" target='_blank'>AI Sys Login</Link></li>
+                                        <li><Link  href="refusionai.com" target='_blank'>GenAI Chatbot</Link></li>
+                                        <li><Link  href="https://dialer.czit.io/" target='_blank'>AI Voice Agent</Link></li>
+                                        <li><Link  href="https://sys.ideapad.ai/" target='_blank'>AI CRM & Marketing</Link></li>
                                     </ul>
                                 </li>
                             </ul>

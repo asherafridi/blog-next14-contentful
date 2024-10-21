@@ -1,9 +1,7 @@
 "use client";
 import React from 'react'
 import Link from 'next/link'
-import about1 from '@/public/images/about/about_image_3.webp'
-import about2 from '@/public/images/about/about_image_11.webp'
-import about3 from '@/public/images/about/about_image_10.webp'
+import about1 from '@/public/images/about/we_are.png'
 
 import Image from 'next/image'
 
@@ -18,8 +16,6 @@ const About = () => {
                     <div className="col-lg-6">
                         <div className="about_image_1">
                             <Image src={about1} alt="Techco - About" style={{borderRadius:"20px"}} />
-                            <Image src={about2} data-parallax='{"y" : 80, "smoothness": 6}' alt="Techco - About" />
-                            <Image src={about3} data-parallax='{"y" : -80, "smoothness": 6}' alt="Techco - About" />
                         </div>
                     </div>
                     <div className="col-lg-5">

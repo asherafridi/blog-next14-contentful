@@ -370,3 +370,7 @@ a {
   right: 0px!important;
   left:auto;
 }
+
+.site_header_1::before {
+		background: linear-gradient(45deg, #0448AA, #21ACF0, #6250DA, #CE22E4);
+	}

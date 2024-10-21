@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="container">
                 <div className="row align-items-center justify-content-lg-between">
                     <div className="container-fluid d-flex justify-content-center flex-column align-items-center">
-                        <h2>Cloud-Powered Success for Modern Enterprises</h2>
+                        <h2>AI Powered Digital Transformation for Enterprise</h2>
                             <form onSubmit={handleSubmit} className='control-search'>
                                 <input
                                     className="input is-rounded"
