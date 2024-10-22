@@ -17,9 +17,9 @@ const MobileMenu = () => {
             {menus.map((item) => (
                 <ListItem  key={item.id}>
                     
-                        <Link href={item.link} onClick={() => window.scrollTo(0, 0)} className="active">
+                        <a href={item.link} onClick={() => window.scrollTo(0, 0)} className="active">
                             {item.title}
-                        </Link>
+                        </a>
                 </ListItem>
             ))}
         </ul>

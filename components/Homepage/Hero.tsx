@@ -81,7 +81,7 @@ const Hero = () => {
                                     <i className="fa-solid fa-arrow-up"></i>
                                 </button>
                             </form>
-                        <p className='search-suggest '>Enter your prompt in the box above, or try using one of the suggested options below:</p>
+                        <p className='search-suggest '>What would you like us to Develope or Implement today for your Cloud or On-Prem Infrastructure?</p>
                         <Swiper
                             modules={[Autoplay]} // Make sure Autoplay is included here
                             spaceBetween={2}
