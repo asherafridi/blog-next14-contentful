@@ -1,6 +1,5 @@
 import React from 'react';
 import ListItem from "@mui/material/ListItem"; // Correct import
-import Link from 'next/link';
 
 const menus = [
     { id: 1, title: 'Home', link: '/' },
