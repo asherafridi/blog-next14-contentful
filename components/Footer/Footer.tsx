@@ -13,81 +13,48 @@ const Footer = () => {
   const [message, setMessage] = useState("");
 
   // Handle form submission
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e:any) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
 
-    // Sending the email to the newsletter API
     try {
       const response = await fetch("/api/email/newsletter", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          recipient: email,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recipient: email }),
       });
 
       const result = await response.json();
-      if (response.ok) {
-        setMessage("Thank you for subscribing!");
-      } else {
-        setMessage(result.error || "Failed to subscribe.");
-      }
+      setMessage(response.ok ? "Thank you for subscribing!" : result.error || "Failed to subscribe.");
     } catch (e) {
-        console.log(e);
+      console.log(e);
       setMessage("An error occurred, please try again later.");
     } finally {
       setLoading(false);
     }
   };
 
-  const services = [
-    "Data Center Modernization",
-    "Office 365 Migration",
-    "Cloud Migration Services",
-    "Network Consultation",
-    "Security Assessment",
-    "Helpdesk Services",
-  ];
+  const services = {
+    "Data Center Modernization": "data-center-modernization",
+    "Office 365 Migration": "office-365-migration",
+    "Cloud Migration Services": "cloud-migration-services",
+    "Network Consultation": "network-consultation",
+    "Security Assessment": "security-assessment",
+    "Helpdesk Services": "helpdesk-services",
+  };
 
   return (
     <footer className="site_footer footer_layout_1">
       <div
         className="content_box"
-        style={{ backgroundImage: `url(${'/images/shapes/bg_pattern_3.svg'})` }}
+        style={{ backgroundImage: `url('/images/shapes/bg_pattern_3.svg')` }}
       >
         <div className="container">
           <div className="diract_contact_links text-white">
-            <div className="iconbox_block layout_icon_left">
-              <div className="iconbox_icon">
-                <Image src={icon1} alt="Mail SVG Icon" />
-              </div>
-              <div className="iconbox_content">
-                <h3 className="iconbox_title">Write to us</h3>
-                <p className="mb-0">cs@CloudiDea.io</p>
-              </div>
-            </div>
-            <div className="iconbox_block layout_icon_left">
-              <div className="iconbox_icon">
-                <Image src={icon2} alt="Calling Check SVG Icon" />
-              </div>
-              <div className="iconbox_content">
-                <h3 className="iconbox_title">Call Us (USA)</h3>
-                <p className="mb-0">+(1) 800 806-8575</p>
-              </div>
-            </div>
-            <div className="iconbox_block layout_icon_left">
-              <div className="iconbox_icon">
-                <Image src={icon3} alt="Map Mark Check SVG Icon" />
-              </div>
-              <div className="iconbox_content">
-                <h3 className="iconbox_title">Our Office</h3>
-                <p className="mb-0">SAN FRANCISCO</p>
-              </div>
-            </div>
+            <ContactIcon title="Write to us" icon={icon1} text="cs@CloudiDea.io" />
+            <ContactIcon title="Call Us (USA)" icon={icon2} text="+(1) 800 806-8575" />
+            <ContactIcon title="Our Office" icon={icon3} text="SAN FRANCISCO" />
           </div>
           <div className="footer_main_content">
             <div className="row justify-content-lg-between">
@@ -115,20 +82,14 @@ const Footer = () => {
                       required
                     />
                     <button type="submit" disabled={loading}>
-                      <i className="fa-solid fa-paper-plane"></i>
+                      {loading ? "Sending..." : <i className="fa-solid fa-paper-plane"></i>}
                     </button>
                   </form>
-                  {message && <p>{message}</p>}
+                  {message && <p className={`message ${message.includes("Thank") ? "success" : "error"}`}>{message}</p>}
                   <ul className="social_links_block unordered_list">
-                    <li>
-                      <Link href="/">Facebook</Link>
-                    </li>
-                    <li>
-                      <Link href="/">Twitter</Link>
-                    </li>
-                    <li>
-                      <Link href="/">LinkedIn</Link>
-                    </li>
+                    <li><Link href="/">Facebook</Link></li>
+                    <li><Link href="/">Twitter</Link></li>
+                    <li><Link href="/">LinkedIn</Link></li>
                   </ul>
                 </div>
               </div>
@@ -136,9 +97,9 @@ const Footer = () => {
                 <div className="footer_widget">
                   <h3 className="footer_info_title">Services</h3>
                   <ul className="icon_list unordered_list_block">
-                    {services.map((service, srv) => (
-                      <li key={srv}>
-                        <Link href={`/services/${service}`}>
+                    {Object.entries(services).map(([service, url]) => (
+                      <li key={service}>
+                        <Link href={`/services/${url}`}>
                           <span className="icon_list_text">{service}</span>
                         </Link>
                       </li>
@@ -150,26 +111,10 @@ const Footer = () => {
                 <div className="footer_widget">
                   <h3 className="footer_info_title">Information</h3>
                   <ul className="icon_list unordered_list_block">
-                    <li>
-                      <Link href="/about-us">
-                        <span className="icon_list_text">What We Do</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/meet">
-                        <span className="icon_list_text">Lets Meet</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/portfolio">
-                        <span className="icon_list_text">Our Portfolio</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact-us">
-                        <span className="icon_list_text">Contact Us</span>
-                      </Link>
-                    </li>
+                    <li><Link href="/about-us"><span className="icon_list_text">What We Do</span></Link></li>
+                    <li><Link href="/meet"><span className="icon_list_text">Lets Meet</span></Link></li>
+                    <li><Link href="/portfolio"><span className="icon_list_text">Our Portfolio</span></Link></li>
+                    <li><Link href="/contact-us"><span className="icon_list_text">Contact Us</span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -179,13 +124,24 @@ const Footer = () => {
       </div>
       <div className="footer_bottom">
         <div className="container d-md-flex align-items-md-center justify-content-md-between">
-          <p className="copyright_text m-0">
-            Copyright © 2024 CloudZone IT, All rights reserved.
-          </p>
+          <p className="copyright_text m-0">Copyright © 2024 CloudZone IT, All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
+
+// Reusable Contact Icon Component
+const ContactIcon = ({ title, icon, text }:{ title:any, icon:any, text:any }) => (
+  <div className="iconbox_block layout_icon_left">
+    <div className="iconbox_icon">
+      <Image src={icon} alt={`${title} Icon`} />
+    </div>
+    <div className="iconbox_content">
+      <h3 className="iconbox_title">{title}</h3>
+      <p className="mb-0">{text}</p>
+    </div>
+  </div>
+);
 
 export default Footer;
