@@ -72,7 +72,7 @@ export default function GenAIJumpstartPage() {
                             <div className="col-lg-4">
                                 <div className="outcome_box">
                                     <h4>Reduce Support Call Duration</h4>
-                                    <p>GenAI quickly recognizes the call's intent, providing faster resolution recommendations and reducing overall call duration.</p>
+                                    <p>GenAI quickly recognizes the call`s intent, providing faster resolution recommendations and reducing overall call duration.</p>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ export default function GenAIJumpstartPage() {
                         <div className="row">
                             <div className="col-lg-12 text-center">
                                 <h3>Improve Problem Resolution and Team Knowledge</h3>
-                                <p>GenAI's response accuracy of up to 85% enhances team knowledge, instills confidence, and enables faster, more effective problem resolution.</p>
+                                <p>GenAI`s response accuracy of up to 85% enhances team knowledge, instills confidence, and enables faster, more effective problem resolution.</p>
                                 <div className="image_wrap">
                                     <Image
                                         src={flowChartImage}

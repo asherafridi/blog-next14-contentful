@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
-import axios from 'axios'; // You can use fetch if you prefer
+import React from 'react';
 import Link from 'next/link';
 
 export default function Side() {
@@ -47,7 +45,7 @@ const suggestions = [
                 
                 
                 {suggestions.map((suggestion, idx) => (
-                                <Link href={`/gpt?initial-message=${encodeURIComponent(suggestion)}`}>{suggestion}</Link>
+                                <Link key={idx} href={`/gpt?initial-message=${encodeURIComponent(suggestion)}`}>{suggestion}</Link>
                                 
                             ))}
             </div>

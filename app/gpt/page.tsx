@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import gif from "@/public/images/about/giphy.webp";
 import dynamic from "next/dynamic";
 import Side from "./Side";
 
