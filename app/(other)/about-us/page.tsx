@@ -14,7 +14,7 @@ export default function Home() {
         <>
 
             <main className="page_content about-page">
-            <BreadCrumb pageTop="About" pagesub="More CZIT 😃" pageTitle="What We Do" />
+            <BreadCrumb pageTop="About" pagesub="More CloudiDea 😃" pageTitle="What We Do" />
                 <section className="intro_about_section section_space bg-light">
                     <div className="intro_about_content">
                         <div className="container">
@@ -34,7 +34,7 @@ export default function Home() {
                                 <div className="col-lg-4">
                                     <div className="heading_focus_text">
                                         About
-                                        <span className="badge bg-secondary text-white">CZIT 🙂</span>
+                                        <span className="badge bg-secondary text-white">CloudiDea 🙂</span>
                                     </div>
                                     <h2 className="heading_text mb-0">
                                     The Cost Savings cloud transformation for Your enterprise
@@ -42,7 +42,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-lg-6">
                                     <p className="heading_description mb-0">
-                                    At CZIT we offer a comprehensive suite of AI digital services designed to help businesses thrive in the digital age. Our team of AI experts is dedicated to delivering innovative solutions that drive growth, streamline operations, and enhance customer experiences.
+                                    At CloudiDea we offer a comprehensive suite of AI digital services designed to help businesses thrive in the digital age. Our team of AI experts is dedicated to delivering innovative solutions that drive growth, streamline operations, and enhance customer experiences.
                                     </p>
                                 </div>
                             </div>

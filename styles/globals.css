@@ -142,6 +142,9 @@ a {
  display: flex;
  justify-content: center;
  align-items: center;
+ max-height: calc(100vh - 100px);
+ overflow-y: auto;
+
 }
 .gpt .sidebar h2{
   font-size: 22px;
@@ -374,3 +377,32 @@ a {
 .site_header_1::before {
 		background: linear-gradient(45deg, #0448AA, #21ACF0, #6250DA, #CE22E4);
 	}
+
+  .main_menu_list{
+    gap: 0px 20px;
+  }
+
+  .gpt-side{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gpt-side a{
+    padding: 5px 20px;
+    margin-bottom: 0px;
+    border: 1px solid #171717;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+ .sidebar > *:not(:last-child){
+    margin-bottom: 0px;
+  }
+  .gpt-side{
+    /* overflow-y: scroll; */
+    padding: 50px 20px;
+  }
+  .gpt-side a:hover{
+    background: #171717;
+    color: #fff;
+  }

@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import Link from 'next/link'
-import about1 from '@/public/images/about/we_are.png'
+import about1 from '@/public/images/about/about_image_3.webp'
 
 import Image from 'next/image'
 
@@ -14,8 +14,8 @@ const About = () => {
             <div className="container">
                 <div className="row align-items-center justify-content-between">
                     <div className="col-lg-6">
-                        <div className="about_image_1">
-                            <Image src={about1} alt="Techco - About" style={{borderRadius:"20px"}} />
+                        <div className="about_image">
+                            <Image src={about1} alt="Techco - About" style={{borderRadius:"20px", width:'100%'}} />
                         </div>
                     </div>
                     <div className="col-lg-5">
@@ -23,7 +23,7 @@ const About = () => {
                             <div className="heading_block">
                                 <div className="heading_focus_text">
                                     We are 😃
-                                    <span className="badge bg-secondary text-white">CloudZone IT</span>
+                                    <span className="badge bg-secondary text-white">CloudiDea</span>
                                 </div>
                                 <h2 className="heading_text">
                                 Cloud Computing: Your Gateway to Innovation

@@ -126,7 +126,7 @@ const Services = [
         sImg: icon7,
         title: 'Cloud Computing',
         slug: 'Strategic-Planning-and-Execution',
-        description: 'CZIT offers numerous benefits to enterprises through cloud computing, transforming how they operate and compete in the market . Cloud computing offers scalability and flexibility, allowing businesses to easily adjust resources based on demand. Thus providing cost savings by eliminating the need for expensive on-premises infrastructure.',
+        description: 'CloudiDea offers numerous benefits to enterprises through cloud computing, transforming how they operate and compete in the market . Cloud computing offers scalability and flexibility, allowing businesses to easily adjust resources based on demand. Thus providing cost savings by eliminating the need for expensive on-premises infrastructure.',
         count : 75
     },
     {

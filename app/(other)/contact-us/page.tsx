@@ -54,7 +54,7 @@ export default function Home() {
                                     </div>
                                     <div className="iconbox_content">
                                         <h3 className="iconbox_title">Email</h3>
-                                        <p className="mb-0">cs@czit.io</p>
+                                        <p className="mb-0">cs@CloudiDea.io</p>
                                     </div>
                                 </div>
                             </div>

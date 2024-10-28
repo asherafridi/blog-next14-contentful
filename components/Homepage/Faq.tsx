@@ -19,7 +19,7 @@ const FaqSection = () => {
     const faqItems = [
         {
             id: '1',
-            question: 'What services does czit.io offer?',
+            question: 'What services does CloudiDea offer?',
             answer: "We offer a range of Cloud Computing services, including on-prem to Azure, AWS, GCP Migrations, Data Analytics. security assessment, natural language processing, machine learning, data analytics, process automations, chatbot development, and AI consultation. Our team of experts can help you leverage AI technologies to improve efficiency, automate processes, gain insights from data, and enhance customer experiences.",
         },
         {
@@ -29,7 +29,7 @@ const FaqSection = () => {
         },
         {
             id: '3',
-            question: 'How can I get started with czit ?',
+            question: 'How can I get started with CloudiDea ?',
             answer: "To get started, simply reach out to our team through our website or contact information. We will schedule an initial consultation to understand your business goals, discuss potential AI solutions, and provide you with a customized proposal. We are here to help you leverage AI technologies and drive business growth.",
         },
         {

@@ -51,7 +51,7 @@ export default function DataEntryModal( {setusername}:{setusername:any}) {
 <Modal show={show} centered>
       {/* Custom Modal Header */}
       <Modal.Header className='custom-modal-header'>
-        <Modal.Title className="custom-modal-title">Enter Your Data</Modal.Title>
+        <Modal.Title className="custom-modal-title">Please provide your details</Modal.Title>
       </Modal.Header>
 
       {/* Modal Body with Form */}

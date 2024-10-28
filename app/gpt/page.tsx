@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import gif from "@/public/images/about/giphy.webp";
 import dynamic from "next/dynamic";
+import Side from "./Side";
 
 
 const DataEntryModal = dynamic(() => import('./Dialouge'), { ssr: false });
@@ -56,7 +57,7 @@ const ChatComponent = ({isUsername}:{isUsername:any}) => {
   const [assistantName, setAssistantName] = useState(""); // Initially empty
 
   const [messages, setMessages] = useState<JSXMessage[]>([
-    { sender: assistantName || "Assistant", text: "Hi, welcome to ChatZone! Go ahead and send me a message. 😄" },
+    { sender: assistantName || "Assistant", text: "Hi, welcome to ChatiDea! Go ahead and send me a message. 😄" },
   ]);
 
   useEffect(() => {
@@ -185,14 +186,7 @@ const ChatComponent = ({isUsername}:{isUsername:any}) => {
 
   return (
     <div className="row gpt">
-      <div className="col-md-3 sidebar d-none d-sm-flex" style={{backgroundColor:"#72C5DB"
-      }}>
-        <Image src={gif} alt="fit" width={250} height={250} />
-        {/* <h2>
-          Welcome to ChatZone, CloudZone IT generative AI tool guiding you to the answers you need about digital business
-          transformation. What issue can we solve for you today?
-        </h2> */}
-      </div>
+      <Side />
       <div className="col-md-9">
         <section className="msger">
           <main className="msger-chat" ref={chatRef}>

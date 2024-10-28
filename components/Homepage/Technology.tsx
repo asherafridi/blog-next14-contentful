@@ -68,7 +68,7 @@ const TechnologySection = () => {
                     Our Technologies
                 </div>
                 <h2 className="heading_text mb-0">
-                    We Use <mark>Technologies</mark>
+                    Technology <mark>Portfolio</mark>
                 </h2>
             </div>
 

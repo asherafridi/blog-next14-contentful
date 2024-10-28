@@ -57,12 +57,14 @@ const Header = () => {
                                         <li><Link href="/">Home</Link></li>
                                         <li className="dropdown">
                                             <Link className="nav-link" href="/services" id="services_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Services
+                                                Our Services
                                             </Link>
                                             <ServiceMenu />
                                         </li>
-                                        <li><Link href="/portfolio">Portfolio</Link></li>
-                                        <li><Link href="/gpt">ChatZone</Link></li>
+                                        <li><Link href="/platforms">Our Platforms</Link></li>
+                                        <li><Link href="/portfolio">Our Work</Link></li>
+                                        <li><Link href="/product-ideation">Product Ideation</Link></li>
+                                        <li><Link href="/gpt">ChatIdeas</Link></li>
                                         <li><Link href="/meet">Lets Meet</Link></li>
 
                                     </ul>
