@@ -89,9 +89,9 @@ export default function GenAIJumpstartPage() {
                                     <Image
                                         src={flowChartImage}
                                         alt="Flow Chart Visualization"
-                                        width={400}
-                                        height={400}
-                                        className="rounded-circle"
+                                        width={1200}
+                                        height={1200}
+                                        className=""
                                     />
                                 </div>
                             </div>

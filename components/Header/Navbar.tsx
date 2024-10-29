@@ -42,14 +42,14 @@ const Header = () => {
             <div className={`header_bottom stricky  ${isSticky ? 'stricked-menu stricky-fixed' : ''}`}>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-xl-3 col-lg-2 col-5">
+                        <div className="col-xl-2 col-lg-2 col-5">
                             <div className="site_logo">
                                 <Link className="site_link" href="/">
                                     <Image src={logo} alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template" />
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-7 col-2">
+                        <div className="col-xl-8 col-lg-7 col-2">
                             <nav className="main_menu navbar navbar-expand-lg">
                                 <div className="main_menu_inner collapse navbar-collapse justify-content-lg-center" id="main_menu_dropdown">
                                     <ul className="main_menu_list unordered_list justify-content-center">
@@ -61,7 +61,7 @@ const Header = () => {
                                             </Link>
                                             <ServiceMenu />
                                         </li>
-                                        <li><Link href="/platforms">Our Platforms</Link></li>
+                                        <li><Link href="#">Our Platforms</Link></li>
                                         <li><Link href="/portfolio">Our Work</Link></li>
                                         <li><Link href="/product-ideation">Product Ideation</Link></li>
                                         <li><Link href="/gpt">ChatIdeas</Link></li>
@@ -71,7 +71,7 @@ const Header = () => {
                                 </div>
                             </nav>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-5">
+                        <div className="col-xl-2 col-lg-2 col-5 d-flex justify-content-end">
                             <ul className="header_btns_group unordered_list justify-content-end">
                                 <li>
                                     <button className="mobile_menu_btn" onClick={() => setMobailState(!mobailActive)} type="button" data-bs-toggle="collapse" data-bs-target="#main_menu_dropdown" aria-expanded="false" aria-label="Toggle navigation">

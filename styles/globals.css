@@ -408,11 +408,11 @@ a {
   }
 
 
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     .main_menu_list > li > a {
         min-height: 50px;
     }
     .main_menu_list {
       padding: 18px 0;
     }
-}
+} */
