@@ -55,19 +55,16 @@ const BlogList = () => {
               <div className="col-lg-6" key={Bitem}>
                 <div className="portfolio_block portfolio_layout_2">
                   <div className="portfolio_image">
-                    <Link  className="portfolio_image_wrap bg-light" href={`/portfolio/${blog.fields.slug}`} as={`/portfolio/${blog.fields.slug}`}>
-                      <Image src={`https:${blog.fields.featuredImage.fields?.file.url}`} alt="Mobile App Design" width={1000} height={1000}/>
+                    <Link  className="portfolio_image_wrap bg-light" href={`/platforms/${blog.fields.slug}`} as={`/platforms/${blog.fields.slug}`}>
+                      <Image src={`https:${blog.fields.featuredImage?.fields?.file.url}`} alt="Mobile App Design" width={1000} height={1000}/>
                     </Link>
                   </div>
                   <div className="portfolio_content">
                     <h3 className="portfolio_title">
-                      <Link  href={`${blog.fields.link}`} as={`${blog.fields.link}`} target='_blank'>
-                      {blog.fields.title}
+                      <Link  href={`/platforms/${blog.fields.slug}`} as={`/platforms/${blog.fields.slug}`} target='_blank'>
+                      {blog.fields.name}
                       </Link>
                     </h3>
-                    <ul className="category_list unordered_list">
-                      <li><Link href={`/portfolio/${blog.fields.slug}`} as={`/portfolio/${blog.fields.slug}`}> {blog.fields.tags.tags[0]}</Link></li>
-                    </ul>
                   </div>
                 </div>
               </div>

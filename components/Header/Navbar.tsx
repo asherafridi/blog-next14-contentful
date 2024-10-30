@@ -61,7 +61,15 @@ const Header = () => {
                                             </Link>
                                             <ServiceMenu />
                                         </li>
-                                        <li><Link href="#">Our Platforms</Link></li>
+                                        <li className='dropdown'> <Link href="#">Our Platforms</Link>
+
+
+                                            <ul className="dropdown-menu login-menu" aria-labelledby="portfolio_submenu">
+                                                <li><Link href="/platforms/crm-ai-marketing">CRM + AI Marketing</Link></li>
+                                                <li><Link href="/platforms/ai-cx-contact-center">AI (CX) Contact Center</Link></li>
+                                                <li><Link href="/platforms/ai-template-marketplace">AI Template Marketplace</Link></li>
+                                            </ul>
+                                        </li>
                                         <li><Link href="/portfolio">Our Work</Link></li>
                                         <li><Link href="/product-ideation">Product Ideation</Link></li>
                                         <li><Link href="/gpt">ChatIdeas</Link></li>
@@ -88,9 +96,9 @@ const Header = () => {
                                     </Link>
 
                                     <ul className="dropdown-menu login-menu" aria-labelledby="portfolio_submenu">
-                                        <li><Link  href="https://refusionai.com" target='_blank'>GenAI Chatbot</Link></li>
-                                        <li><Link  href="https://dialer.czit.io/" target='_blank'>AI Voice Agent</Link></li>
-                                        <li><Link  href="https://sys.ideapad.ai/" target='_blank'>AI CRM & Marketing</Link></li>
+                                        <li><Link href="https://refusionai.com" target='_blank'>GenAI Chatbot</Link></li>
+                                        <li><Link href="https://dialer.czit.io/" target='_blank'>AI Voice Agent</Link></li>
+                                        <li><Link href="https://sys.ideapad.ai/" target='_blank'>AI CRM & Marketing</Link></li>
                                     </ul>
                                 </li>
                             </ul>

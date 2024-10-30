@@ -50,7 +50,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
     <>
 
       <main className="page_content about-page">
-        <BreadCrumb pageTitle={blog?.fields.title} pagesub={'Details 😍'} pageTop={'Portfolio'} />
+        <BreadCrumb pageTitle={blog?.fields.name} pagesub={'Details 😍'} pageTop={'Platform'} />
         <BlogSingle blog={blog}/>
       </main>
       <CtaSection />
